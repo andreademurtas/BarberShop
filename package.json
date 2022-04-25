@@ -1,0 +1,24 @@
+{
+  "name": "barbershop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreademurtas/BarberShop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/andreademurtas/BarberShop/issues"
+  },
+  "homepage": "https://github.com/andreademurtas/BarberShop#readme"
+}

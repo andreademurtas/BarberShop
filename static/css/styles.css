@@ -1,0 +1,48 @@
+.bgimage {
+  background-image: url("../img/barbershop_blurred.jpg");
+  background-position: center;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+}
+
+
+.content {
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+}
+h1:before, h1:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 5px solid;
+  margin: auto;
+}
+h1:before {
+  margin-right: 10px
+}
+h1:after {
+  margin-left: 10px
+}
+
+navbar_barber {
+  background-color: #dadadada;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+  font-size: 20px;
+}

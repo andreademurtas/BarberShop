@@ -8,61 +8,11 @@
 
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<style>
-.bgimage {
-  background-image: url("static/img/barbershop_blurred.jpg");
-  background-position: center;
-  height: 700px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  display: block;
-  max-width: 100%;
-}
-
-
-.content {
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-h1 {
-  display: flex;
-  flex-direction: row;
-}
-h1:before, h1:after{
-  content: "";
-  flex: 1 1;
-  border-bottom: 5px solid;
-  margin: auto;
-}
-h1:before {
-  margin-right: 10px
-}
-h1:after {
-  margin-left: 10px
-}
-
-navbar_barber {
-  background-color: #dadadada;
-}
-
-.navbar-nav > li{
-  padding-left:30px;
-  padding-right:30px;
-  font-size: 20px;
-}
-
-</style>
 		<nav class="navbar navbar-expand-lg navbar-light " id="navbar_barber">
-				<a class="navbar-brand px-3" href="#"><img src="static/img/barbershop_logo.png"></a>
+				<a class="navbar-brand px-3" href="#"><img src="../img/barbershop_logo.png"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 				</button>
@@ -73,7 +23,7 @@ navbar_barber {
 								<a class="nav-link" href="#">Homepage <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link" href="chisiamo.html">Chi siamo</a>
+								<a class="nav-link" href="chisiamo">Chi siamo</a>
 						</li>
 						<li class="nav-item">
 								<a class="nav-link" href="#">Prenota Appuntamento</a>
