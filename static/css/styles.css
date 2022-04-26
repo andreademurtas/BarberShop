@@ -46,3 +46,17 @@ navbar_barber {
   padding-right:30px;
   font-size: 20px;
 }
+
+.icon{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 5px; 
+}
+
+.p1 {
+  margin-right: 100px;
+  margin-top: 10px;
+  text-align:start;
+}
+
