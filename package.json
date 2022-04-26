@@ -15,7 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "pg": "latest"
   },
   "bugs": {
     "url": "https://github.com/andreademurtas/BarberShop/issues"
