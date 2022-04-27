@@ -45,9 +45,9 @@
             <p style="margin-left: 100px;">Prenota direttamente compilando il seguente form con i tuoi dati. Durante la
                 prenotazione ti verranno mostrati solo gli slot al momento disponibili.
             </p>
-            <div class="d-flex flex-row justify-content-md-center">
-                <div class="d-flex flex-column">
-                    <p style="margin-top: 50px;">Informazioni personali :</p>
+            <div class="d-flex flex-row justify-content-start" style="margin-top: 30px">
+                <div class="d-flex flex-column" style="margin-left: 100px; border: 2px solid #5a3a1a; padding-left: 20px; border-top-left-radius: 10px; border-right: 0px; padding-bottom: 20px; border-bottom: 0px;">
+                    <p style="margin-top: 20px;">Informazioni personali :</p>
                     <table>
                         <form action="" method="post" name="registrazione">
                             <tr> 
@@ -82,17 +82,36 @@
                         </form>
                     </table>
                 </div>
-                <div class="d-flex flex-column">
-                    <input type="date" style="margin-top:131px; margin-left: 40px;">
+                <div class="d-flex flex-column" style="margin-left:0px; border: 2px solid  #5a3a1a; padding-right: 20px; border-top-right-radius: 10px; border-left: 0px; padding-bottom: 20px; border-bottom: 0px;">
+                    <tr>
+                        <td>
+                            <p style="margin-top:20px; margin-left: 25px;">Tipo di appuntamento:</p>
+                            
+                            <select name="tipo"  style="margin-bottom: 15px; margin-left: 25px;" required>
+                                <option value=""></option>
+                                <option value="Taglio capelli">Taglio capelli</option>
+                                <option value="Taglio barba">Taglio barba</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <p style="margin-top: 45px; margin-left: 40px; margin-bottom: 0px;">Data:</p>
+                    <input type="date" style="margin-top:5px; margin-left: 40px;">
                     <input type="time" style="margin-top:5px ; margin-left:40px">
+                    
                 </div>
             </div>
         </div>
-        
-            
-
     </div>
-    <div class="d-flex  flex-wrap justify-content-center" style="margin-top: 100px; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px">
+    <div class="d-flex flex-row justify-content-start">
+        <table style="border: 2px solid  #5a3a1a; margin-left: 100px; border-top: 0px;">
+            <tr>
+                <td style="padding-left: 150px; padding-right: 148px;padding-bottom: 30px; padding-top: 10px;">
+                    <input type="button" value="Prenota" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px; color: white;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="d-flex  flex-wrap justify-content-center" style="margin-top: 100px; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
         <div>
                 <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
                 <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>

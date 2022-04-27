@@ -1,5 +1,5 @@
 const { Client  } = require('pg');
-const dbconfig = require('./dbconfig');
+const dbconfig = require('dbconfig');
 
 const utenti_client = new Client({
   user: 'postgres',
