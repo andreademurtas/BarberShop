@@ -40,6 +40,13 @@
             return true;
         }
 
+        function changeColor(e){
+            e.style="border-radius: 20px; text-align: center ; background-color: #5a3d20; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;";
+        }
+
+        function colorBack(e){
+            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;";
+        }
         
 
     </script>
@@ -147,7 +154,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2" style="padding-left: 140px; padding-right: 148px;padding-bottom: 0px; padding-top: 25px;">
-                                    <input type="submit" value="Prenota" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
+                                    <input type="submit" value="Prenota" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
                                 </td>
                                 
                             </tr>
