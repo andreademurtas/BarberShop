@@ -32,6 +32,14 @@ app.get("/database", (req,res) => {
     });
 });
 
+app.get("/prenota", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/prenota.html"));
+});
+
+app.get("/submit", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/submit.html"));
+});
+
 app.listen(8000, () => {
     console.log("Server is running on port 8000");
 });

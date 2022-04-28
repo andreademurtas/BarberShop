@@ -9,24 +9,45 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
+        
+        <script>
+
+                function bigIcon(e){
+                        e.style.height="125px";
+                        e.style.width="125px";
+                        document.getElementById("space").style.height="25px";
+                }
+
+                function normIcon(e){
+                        e.style.height="100px";
+                        e.style.width="100px";
+                        document.getElementById("space").style.height="50px";
+                }
+
+                function eventListener(){
+                        var el=document.getElementsByTagName("img");
+                        for(i=0;i<el.length;i++){
+                                el.addEventListener("mouseenter",zoom);
+                        }
+                }
+        </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber"  >
 			<a class="navbar-brand px-3" href="/"><img src="../img/barbershop_logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-        </button>
-
+        </button> 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto"> 
                 <li class="nav-item">
                         <a class="nav-link" href="/">Homepage </a>
                 </li>
                 <li class="nav-item-active">
-                        <a class="nav-link" href="/chisiamo">Chi siamo <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/chisiamo"><strong>Chi siamo </strong><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#">Prenota Appuntamento</a>
+                        <a class="nav-link" href="prenota">Prenota Appuntamento</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="#">Il mio profilo</a>
@@ -35,14 +56,12 @@
     </div>
     </nav>
     <div class="content text-center">
-        <h1 class="h1" style="color: #987654; font-size:6vw; font-family: 'Times New Roman', Times, serif;">Barber Shop</h1>
+        <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
-    
-
     <div class="d-flex flex-row">
         <div class="d-flex flex-fill flex-column p-2" style="max-width: 100%;">
                 <div class="flex-fill p-2">
-                    <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; text-align: center;margin-top: 150px;">Chi Siamo</h2>
+                    <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; text-align: center;margin-top: 50px;">Chi Siamo</h2>
                         <p style="text-align: center; margin-left: 400px; margin-right: 400px;font-size: 20px ; margin-bottom: 80px;">Nel 1892 abbiamo aperto la nostra prima sede a Milano. Ora il team è composto da 5 barbieri professionisti. Tutti i nostri barbieri hanno seguito corsi di specializzazione e hanno il brevetto bla bla bal</p>
                     <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; text-align: center;">Le nostre sedi</h2>
                         <p style="text-align: center; margin-left: 400px; margin-right: 400px;font-size: 20px ; margin-bottom: 40px;">Al momento abbiamo 2 sedi principali. E' in corso l'apertura di una nuova sede </p>
@@ -62,23 +81,23 @@
                     <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; text-align: center;">Il nostro team</h2>
                     <div class="d-flex flex-row justify-content-center " >  
                         <div class="d-flex flex-column">
-                                <img src=/img/icon.png width="100" height="100" class="icon">
+                                <img src=/img/icon.png width="100" height="100" onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="icon">
                                 <p style="text-align: center; color: black;">Francesco - Barbiere</p>
                         </div>
                         <div class="d-flex flex-column">
-                                <img src=/img/icon.png width="100" height="100" class="icon">
+                                <img src=/img/icon.png onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" width="100" height="100" class="icon">
                                 <p style="text-align: center; color: black;">Marco - Barbiere</p>
                         </div>
                         <div class="d-flex flex-column">
-                                <img src=/img/icon.png width="100" height="100" class="icon">
+                                <img src=/img/icon.png width="100" height="100" onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="icon">
                                 <p style="text-align: center; color: black;">Giulia - Barbiere</p>
                         </div>
                         <div class="d-flex flex-column">
-                                <img src=/img/icon.png width="100" height="100" class="icon">
+                                <img src=/img/icon.png width="100" height="100" onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="icon">
                                 <p style="text-align: center; color: black;">Teresa - Segretaria</p>
                         </div>
                     </div>
-                    <p style="height: 50px;"></p>
+                    <p id="space" style="height: 50px;"></p>
                 </div>
 
 

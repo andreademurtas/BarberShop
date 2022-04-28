@@ -31,7 +31,7 @@ h1:before, h1:after{
   margin: auto;
 }
 h1:before {
-  margin-right: 10px
+  margin-right: 10px 
 }
 h1:after {
   margin-left: 10px
@@ -59,4 +59,5 @@ navbar_barber {
   margin-top: 10px;
   text-align:start;
 }
+
 
