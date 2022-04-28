@@ -36,6 +36,10 @@ app.get("/prenota", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/prenota.html"));
 });
 
+app.get("/loginNuovo", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/loginNuovo.html"));
+});
+
 app.get("/submit", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/submit.html"));
 });
