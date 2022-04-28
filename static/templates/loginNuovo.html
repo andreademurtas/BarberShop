@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>BarberShop</title>
+
+    <!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber">
+			<a class="navbar-brand px-3" href="/"><img src="../img/barbershop_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                        <a class="nav-link" href="/">Homepage </a>
+                </li>
+                <li class="nav-item-active">
+                        <a class="nav-link" href="/chisiamo">Chi siamo <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="prenota">Prenota Appuntamento</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Il mio profilo</a>
+                </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="content text-center">
+        <h1 class="h1" style="color: #987654; font-size:6vw; font-family: 'Times New Roman', Times, serif;">Barber Shop</h1>
+    </div>
+
+    <div class="row">
+        <h3 align="center">Barbershop</h3>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h4>Log in</h4>
+                            <p class="w-lg-50" align="center">Inserisci email e password con cui ti sei registrato.</p>
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><svg class="bi bi-person" width="1em" height="1em" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                                </svg></div>
+                            <form class="text-center" method="post">
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" /></div>
+                                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Login</button></div>
+                                <p class="text-muted">Forgot your password?</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h4>Registrati</h4>
+                            <p class="w-lg-50" align="center">Inserisci le credenziali con cui vuoi registrarti.</p>
+                            <form class="text-center" method="post">
+                                <div class="mb-3"><input class="form-control" type="text" name="Nome" placeholder="Nome" /></div>
+                                <div class="mb-3"><input class="form-control" type="text" name="Cognome" placeholder="Cognome" /></div>
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
+                                <div class="mb-3"><input class="form-control" type="tel" name="telefono" placeholder="Telefono" /></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" /></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password_rip" placeholder="Ripeti password" /></div>
+                                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Registrati</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex  flex-wrap justify-content-center" style="background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px">
+        <div>
+                <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
+                <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
+        </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
