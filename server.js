@@ -1,13 +1,17 @@
 const express = require("express");
 const path = require("path");
 const { Client } = require("pg");
-const db = require("./db");
+const database = require("./db");
 
 const app = express();
-const utenti_client = db.utenti_client;
-const prenotazioni_client = db.prenotazioni_client;
-utenti_client.connect();
-prenotazioni_client.connect();
+const db = database.db;
+db.connect( (err) => {
+    if (err) {
+	  console.error("Errore connessione al database");
+	  console.error(err);
+	  process.exit(1);
+	}
+});
 
 app.use(express.static(path.join(__dirname, "static")));
 
