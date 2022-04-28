@@ -9,6 +9,40 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" language="javascript">
+        function ValidaForm(){
+            if((document.registrazione.nome.value=="Nome")){
+                alert("Nome non valido");
+                return false;
+            }
+            if((document.registrazione.cognome.value=="Cognome")||(document.registrazione.cognome.value=="")){
+                alert("Inserire cognome");
+                return false;
+            }
+            if(document.registrazione.genere.value==""){
+                alert("Inserire genere");
+                return false;
+            }
+            if((document.registrazione.Telefono.value=="")||(document.registrazione.Telefono.value=="Telefono")||(document.registrazione.Telefono.value.length<10)){
+                alert("Inserire numero di telefono")
+                return false;
+            }
+            if(document.registrazione.email.value=""){
+                alert("Inserire email valida");
+                return false;
+            }
+            if(document.tipo.value==""){
+                alert("Inserire tipo di appuntamento");
+                return false;
+            }
+            
+            alert("Prenotazione avvenuta con successo");
+            return true;
+        }
+
+        
+
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber">
@@ -23,10 +57,10 @@
                         <a class="nav-link" href="/">Homepage </a>
                 </li>
                 <li class="nav-item-active">
-                        <a class="nav-link" href="/chisiamo">Chi siamo <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/chisiamo">Chi siamo </a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#">Prenota Appuntamento</a>
+                        <a class="nav-link" href="#"><strong>Prenota Appuntamento</strong></a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="#">Il mio profilo</a>
@@ -35,81 +69,98 @@
     </div>
     </nav>
     <div class="content text-center">
-        <h1 class="h1" style="color: #987654; font-size:6vw; font-family: 'Times New Roman', Times, serif;">Barber Shop</h1>
+        <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
     <div class="d-flex flex-row justify-content-start">
         <div class="d-flex flex-column">
             <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; margin-left: 100px; margin-top: 100px;">Hai già un account ?</h2>
             <p style="margin-left: 100px;"> Accedi e prenota direttamente dalla tua <a href="#">pagina personale</a></p>
             <h2 class="h2" style="color:#987654;font-size:2vw ; font-family: 'Times New Roman', Times, serif; margin-left: 100px; margin-top: 50px;">Prenota senza registrazione</h2>
-            <p style="margin-left: 100px;">Prenota direttamente compilando il seguente form con i tuoi dati. Durante la
+            <p style="margin-left: 100px;margin-bottom: 30px;">Prenota direttamente compilando il seguente form con i tuoi dati. Durante la
                 prenotazione ti verranno mostrati solo gli slot al momento disponibili.
             </p>
             <div class="d-flex flex-row justify-content-start" style="margin-top: 30px">
-                <div class="d-flex flex-column" style="margin-left: 100px; border: 2px solid #5a3a1a; padding-left: 20px; border-top-left-radius: 10px; border-right: 0px; padding-bottom: 20px; border-bottom: 0px;">
-                    <p style="margin-top: 20px;">Informazioni personali :</p>
+                <div class="d-flex flex-column" style="margin-left: 100px; border: 2px solid #5a3a1a; padding-left: 25px;padding-bottom: 25px; border-radius: 20px; padding-right:20px ;">
+                    
                     <table>
-                        <form action="" method="post" name="registrazione">
+                        <form action="" method="post" name="registrazione" >
+                            <tr>
+                                <td>
+                                    <p style="margin-top: 20px;">Informazioni personali :</p>
+                                </td>
+                                <td>
+                                    <p style="margin-top:20px; margin-left: 25px;">Dettagli appuntamento:</p>
+                                </td>
+                            </tr>
                             <tr> 
                                 <td>
-                                    <input type="text" name="Nome" size="20" value="Nome" style="margin-bottom: 5px;" required>
+                                    <input type="text" name="nome" size="20" style="margin-bottom: 5px;" placeholder="Nome" required>
                                 </td>
+                                <td>
+                                    <select name="tipo"  style="margin-bottom: 15px; margin-left: 25px;" required>
+                                       <option value="">Tipo di taglio</option>
+                                       <option value="Taglio capelli">Taglio capelli</option>
+                                       <option value="Taglio barba">Taglio barba</option>
+                                   </select>
+                               </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" name="Nome" size="20" value="Cognome" style="margin-bottom: 5px;" required>
+                                    <input type="text" name="cognome" size="20" placeholder="Cognome" style="margin-bottom: 5px;" required>
                                 </td>
-                            </tr>
-                            <tr>
                                 <td>
-                                    <select name="genere"  style="margin-bottom: 15px;" required>
-                                        <option value="">Genere</option>
-                                        <option value="Uomo">Uomo</option>
-                                        <option value="Donna">Donna</option>
+                            
+                                    <select name="tipo"  style="margin-bottom: 15px; margin-left: 25px;" required>
+                                        <option value="">Sede</option>
+                                        <option value="Taglio capelli">Ex Poste</option>
+                                        <option value="Taglio barba">Città universitaria</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="number" name="Telefono" value="Telefono" size="20" min="3000000000" max="39999999999" required>
+                                    <select name="genere"  style="margin-bottom: 15px;"  required>
+                                        <option value="e">Genere</option>
+                                        <option value="Uomo">Uomo</option>
+                                        <option value="Donna">Donna</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <p style="margin-top: 5px; margin-left: 25px; margin-bottom: 0px;">Data:</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="email" name="email" value="Email" rquired>
+                                    <input type="tel" name="Telefono" placeholder="Telefono" size="20" min="3000000000" max="39999999999" required>
                                 </td>
+                                <td>
+                                    <input type="date" style="margin-top:5px; margin-left: 25px;" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </td>
+                                <td>
+                                    <input type="time" style="margin-top:5px ; margin-left:25px" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-left: 140px; padding-right: 148px;padding-bottom: 0px; padding-top: 25px;">
+                                    <input type="submit" value="Prenota" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
+                                </td>
+                                
                             </tr>
                         </form>
                     </table>
-                </div>
-                <div class="d-flex flex-column" style="margin-left:0px; border: 2px solid  #5a3a1a; padding-right: 20px; border-top-right-radius: 10px; border-left: 0px; padding-bottom: 20px; border-bottom: 0px;">
-                    <tr>
-                        <td>
-                            <p style="margin-top:20px; margin-left: 25px;">Tipo di appuntamento:</p>
-                            
-                            <select name="tipo"  style="margin-bottom: 15px; margin-left: 25px;" required>
-                                <option value=""></option>
-                                <option value="Taglio capelli">Taglio capelli</option>
-                                <option value="Taglio barba">Taglio barba</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <p style="margin-top: 45px; margin-left: 40px; margin-bottom: 0px;">Data:</p>
-                    <input type="date" style="margin-top:5px; margin-left: 40px;">
-                    <input type="time" style="margin-top:5px ; margin-left:40px">
                     
                 </div>
+                <div class="d-flex flex-column jusify-content-center">
+                    <img src="/img/volto.png" width="200px" height="270px" style="margin-left: 50px; margin-top: 30px;">
+                </div>
+                
             </div>
         </div>
-    </div>
-    <div class="d-flex flex-row justify-content-start">
-        <table style="border: 2px solid  #5a3a1a; margin-left: 100px; border-top: 0px;">
-            <tr>
-                <td style="padding-left: 150px; padding-right: 148px;padding-bottom: 30px; padding-top: 10px;">
-                    <input type="button" value="Prenota" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px; color: white;">
-                </td>
-            </tr>
-        </table>
     </div>
     <div class="d-flex  flex-wrap justify-content-center" style="margin-top: 100px; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
         <div>
