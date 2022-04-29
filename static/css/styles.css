@@ -60,7 +60,7 @@ h1:after {
   text-align:start;
 }
 
-.flex-column {
+.colonna{
   -ms-flex-direction: column!important;
   flex-direction: column!important;
   margin-right: auto;

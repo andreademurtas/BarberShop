@@ -17,8 +17,16 @@
                 }
                 return true;
             }
+            function changeColor(e){
+            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white; box-shadow: 2px 2px 2px black";
+            
+            }
 
+            function colorBack(e){
+                e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;";
+            }
         </script> 
+        
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber">
@@ -51,7 +59,7 @@
     <br>
     <div class="d-flex flex-row justify-content-center" style="text-align: center;">
         <div class="d-flex flex-column">
-            <div class="d-flex flex-row justify-content-center" style="text-align: center;">
+            <div class="d-flex flex-row justify-content-center" style="text-align: center;margin-bottom: 30px; border: 2px solid #5a3a1a; padding-left: 25px;padding-bottom: 25px; border-radius: 20px; padding-right:20px ; padding-top: 25px;">
                 <table>
                     <form action="" method="post" name="registrazione" >
                         <tr><td>
@@ -85,16 +93,16 @@
                         </td></tr>
                         <tr><td></td></tr>
                         <tr><td>
-                                <input type="submit" value="Accedi" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center; vertical-align: center; background-color: #987654; width: 140px; height: auto; padding-top: 10px; padding-bottom: 10px; color: white;">
+                                <input type="submit" value="Accedi" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
                         </td></tr>
                         <tr><td>
-                            <a class="nav-link" href="login.html"><small>Hai già un account?</small></a>
+                            <a class="nav-link" href="login"><small>Hai già un account?</small></a>
                         </td></tr>
                 </table>
             </div>
             
             <div class="d-flex flex-row justify-content-center" style="text-align: center; max-width:fit-content;">
-                <p style="line-height: 0.9;"><small>
+                <p style="line-height: 0.9; margin-bottom: 50px;"><small>
                     I tuoi dati verranno trattati nella rispetto della normativa della privacy. Salviamo i tuoi dati per rendere il servizio più semplice all'utente
                 </small></p>
             </div>
