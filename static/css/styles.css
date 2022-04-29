@@ -37,7 +37,7 @@ h1:after {
   margin-left: 10px
 }
 
-navbar_barber {
+.navbar_barber {
   background-color: #dadadada;
 }
 
@@ -60,4 +60,9 @@ navbar_barber {
   text-align:start;
 }
 
-
+.flex-column {
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+  margin-right: auto;
+  margin-left: auto;
+}
