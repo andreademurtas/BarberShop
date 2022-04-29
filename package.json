@@ -15,11 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "call-bind": "^1.0.2",
     "express": "latest",
+    "express-session": "latest",
     "path": "latest",
-    "pg": "latest",
-	"bcryptjs": "latest",
-    "express-session": "latest"
+    "pg": "latest"
   },
   "bugs": {
     "url": "https://github.com/andreademurtas/BarberShop/issues"

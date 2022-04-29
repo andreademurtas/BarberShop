@@ -66,6 +66,19 @@ app.get("/prenota", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/prenota.html"));
 });
 
+app.get("/profilo", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
+});
+
+
+app.get("/login", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/login.html"));
+});
+
+app.get("/registrati", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/registrati.html"));
+});
+
 app.post("/prenotaSenzaLogin", (req,res) => {
     var giorno = req.body.giorno;
     var ora = req.body.ora;
@@ -101,10 +114,6 @@ app.post("/prenotaSenzaLogin", (req,res) => {
 		    return;
 		}
     }
-});
-
-app.get("/submit", (req,res) => {
-    res.sendFile(path.join(__dirname, "static/templates/(prova)submit.html"));
 });
 
 app.listen(8000, () => {
