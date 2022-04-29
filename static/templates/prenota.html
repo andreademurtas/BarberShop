@@ -91,7 +91,7 @@
                 <div class="d-flex flex-column" style="margin-left: 100px; border: 2px solid #5a3a1a; padding-left: 25px;padding-bottom: 25px; border-radius: 20px; padding-right:20px ;">
                     
                     <table>
-                        <form action="" method="post" name="registrazione" >
+                        <form method="post" name="registrazione" action="/prenotaSenzaLogin">
                             <tr>
                                 <td>
                                     <p style="margin-top: 20px;">Informazioni personali :</p>
@@ -118,7 +118,7 @@
                                 </td>
                                 <td>
                             
-                                    <select name="tipo"  style="margin-bottom: 15px; margin-left: 25px;" required>
+                                    <select name="sede"  style="margin-bottom: 15px; margin-left: 25px;" required>
                                         <option value="">Sede</option>
                                         <option value="Taglio capelli">Ex Poste</option>
                                         <option value="Taglio barba">Città universitaria</option>
@@ -129,8 +129,8 @@
                                 <td>
                                     <select name="genere"  style="margin-bottom: 15px;"  required>
                                         <option value="e">Genere</option>
-                                        <option value="Uomo">Uomo</option>
-                                        <option value="Donna">Donna</option>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
                                     </select>
                                 </td>
                                 <td>
@@ -139,10 +139,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="tel" name="Telefono" placeholder="Telefono" size="20" min="3000000000" max="39999999999" required>
+                                    <input type="tel" name="telefono" placeholder="Telefono" size="20" min="3000000000" max="39999999999" required>
                                 </td>
                                 <td>
-                                    <input type="date" style="margin-top:5px; margin-left: 25px;" required>
+                                    <input name="giorno" type="date" style="margin-top:5px; margin-left: 25px;" required>
                                 </td>
                             </tr>
                             <tr>
@@ -150,7 +150,56 @@
                                     <input type="email" name="email" placeholder="Email" required>
                                 </td>
                                 <td>
-                                    <input type="time" style="margin-top:5px ; margin-left:25px" required>
+										<!--<input type="time" style="margin-top:5px ; margin-left:25px" step="1800" required>-->
+									<select name="ora"  style="margin-bottom: 15px; margin-left: 25px;" required>
+											<option value='00:00'>00:00</option>
+										    <option value='00:30'>00:30</option>
+										    <option value='01:00'>01:00</option>
+                                            <option value='01:30'>01:30</option>
+                                            <option value='02:00'>02:00</option>
+                                            <option value='02:30'>02:30</option>
+                                            <option value='03:00'>03:00</option>
+                                            <option value='03:30'>03:30</option>
+                                            <option value='04:00'>04:00</option>
+                                            <option value='04:30'>04:30</option>
+                                            <option value='05:00'>05:00</option>
+                                            <option value='05:30'>05:30</option>
+                                            <option value='06:00'>06:00</option>
+                                            <option value='06:30'>06:30</option>
+                                            <option value='07:00'>07:00</option>
+                                            <option value='07:30'>07:30</option>
+                                            <option value='08:00'>08:00</option>
+                                            <option value='08:30'>08:30</option>
+                                            <option value='09:00'>09:00</option>
+                                            <option value='09:30'>09:30</option>
+                                            <option value='10:00'>10:00</option>
+                                            <option value='10:30'>10:30</option>
+                                            <option value='11:00'>11:00</option>
+                                            <option value='11:30'>11:30</option>
+                                            <option value='12:00'>12:00</option>
+                                            <option value='12:30'>12:30</option>
+                                            <option value='13:00'>13:00</option>
+                                            <option value='13:30'>13:30</option>
+                                            <option value='14:00'>14:00</option>
+                                            <option value='14:30'>14:30</option>
+                                            <option value='15:00'>15:00</option>
+                                            <option value='15:30'>15:30</option>
+                                            <option value='16:00'>16:00</option>
+                                            <option value='16:30'>16:30</option>
+                                            <option value='17:00'>17:00</option>
+                                            <option value='17:30'>17:30</option>
+                                            <option value='18:00'>18:00</option>
+                                            <option value='18:30'>18:30</option>
+                                            <option value='19:00'>19:00</option>
+                                            <option value='19:30'>19:30</option>
+                                            <option value='20:00'>20:00</option>
+                                            <option value='20:30'>20:30</option>
+                                            <option value='21:00'>21:00</option>
+                                            <option value='21:30'>21:30</option>
+                                            <option value='22:00'>22:00</option>
+                                            <option value='22:30'>22:30</option>
+                                            <option value='23:00'>23:00</option>
+                                            <option value='23:30'>23:30</option>
                                 </td>
                             </tr>
                             <tr>
