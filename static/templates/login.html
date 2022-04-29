@@ -8,17 +8,6 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" language="javascript">
-            function controlloPW(){
-                alert(document.reg.password.value);
-                if(document.reg.password.value!=document.reg.password_rip.value){
-                    alert("le password non combaciano");
-                    return false;
-                }
-                return true;
-            }
-
-        </script> 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar_barber">
@@ -33,7 +22,7 @@
                         <a class="nav-link" href="/">Homepage </a>
                 </li>
                 <li class="nav-item-active">
-                        <a class="nav-link" href="/chisiamo">Chi siamo</a>
+                        <a class="nav-link" href="chisiamo">Chi siamo</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="prenota">Prenota Appuntamento</a>
@@ -56,7 +45,7 @@
                     <tr><td>
                         <h5>Accedi</h5>
                     <tr><td>
-                        <p style="margin-top: 20px;"">Inserisci le tue credenziali di accesso:</p>
+                        <p style="margin-top: 20px;">Inserisci le tue credenziali di accesso:</p>
                     </td></tr>
                     <tr><td>
                         <input type="email" name="email" size="20" style="margin-bottom: 5px;" placeholder="Email" required>
@@ -67,8 +56,11 @@
                     <tr><td>
                         <input type="submit" value="Accedi" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
                     </td></tr>
+                    <tr><td>
+                        <a class="nav-link" href="registrati"><small>Registrati per la prima volta</small></a>
+                    </td></tr>
             </table>
-            <a class="nav-link" href="registrati.html">Registrati per la prima volta </a>
+            
         </div>
         
     </div>
