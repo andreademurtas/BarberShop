@@ -41,12 +41,12 @@
         }
 
         function changeColor(e){
-            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white; box-shadow: 2px 2px 2px black";
+            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white; box-shadow: 2px 2px 2px black";
             
         }
 
         function colorBack(e){
-            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;";
+            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
         }
         
 
@@ -98,7 +98,7 @@
                                     <div class="col">
                                         <p style="margin-top: 5%;">Informazioni personali:</p>
                                         <input type="text" name="nome" style="width: 60%; margin-bottom: 1.5%;" placeholder="Nome" required>
-                                        <input type="text" name="cognome" size="20%" placeholder="Cognome" style="margin-bottom: 1.5%;width: 60%;" required>
+                                        <input type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 60%;" required>
                                         <select name="genere" style="margin-bottom: 1.5%;width: 60%;"  required>
                                             <option value="e">Genere</option>
                                             <option value="M">M</option>
@@ -174,15 +174,15 @@
                                     </div>    
                                 </div>
                                 <div style="margin-top: 2%; text-align: center;">
-                                    <input type="submit" value="Prenota" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 4%; padding-right: 4%; padding-top:1%; padding-bottom: 1%; color: white;">
+                                    <input type="submit" value="Prenota" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top:2%; padding-bottom: 2%; color: white;">
                                 </div>
                             </div>
                         </form>
                     </table>
                     
                 </div>
-                <div class="d-flex flex-column flex-wrap jusify-content-center" hidden="device-width" style=" max-width: 40%;">
-                    <img class="hid" src="/img/volto.png"  width="200px" height="270px" style=" margin-left: 0%; margin-top:3%; width: 100%; ">
+                <div class="d-flex flex-column justify-content-end" style=" max-width: 40%;">
+                    <img class="hid" src="/img/volto.png"  width="200px" height="270px" style=" margin-left: 0%; margin-top:3%; width: 100%;">
                 </div>
                 
             </div>
