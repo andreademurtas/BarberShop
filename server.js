@@ -79,7 +79,8 @@ app.get("/registrati", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/registrati.html"));
 });
 
-app.post("/prenotaSenzaLogin", (req,res) => {
+
+app.post("/prenotaSenzaLogin", async (req,res) => {
     var giorno = req.body.giorno;
     var ora = req.body.ora;
     var nome = req.body.nome;
@@ -89,11 +90,9 @@ app.post("/prenotaSenzaLogin", (req,res) => {
     var telefono = req.body.telefono;
     var tipo = req.body.tipo;
     var sede = req.body.sede;
-    console.log(sede);
-    var esiste;
+    var esiste = false;
     try {
-        prenotazione.controlloSeEsiste(db, giorno, ora, sede, (bool) => { esiste = bool; });
-		console.log(esiste);
+        esiste = await prenotazione.controlloSeEsiste(db, giorno, ora, sede)
     }
     catch (e) {
         console.error(e);
@@ -101,7 +100,7 @@ app.post("/prenotaSenzaLogin", (req,res) => {
 		return;
     }
     if (esiste) {
-        res.send("<p>Gia c'è una prenotazione in questo orario</p>");
+        res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/prenota'>Torna alla pagina precedente</a>");
 	}
     else {
 		try{
