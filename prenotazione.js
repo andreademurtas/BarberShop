@@ -10,19 +10,15 @@ function inserisciPrenotazione(client, giorno, ora, nome, cognome, email, genere
     });
 }
 
-async function controlloSeEsiste(client, giorno, ora, sede) {
+async function controlloSeEsistePrenotazione(client, giorno, ora, sede) {
     try {
 		var result = await client.query('SELECT * FROM prenotazioni WHERE giorno = $1 AND ora = $2 AND sede = $3', [giorno, ora, sede]);
     } catch (err) {
 		console.log(err);
 		process.exit(1);
     }
-    if (result.rows.length > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return result.rows.length > 0;
 }
 
 exports.inserisciPrenotazione = inserisciPrenotazione;
-exports.controlloSeEsiste = controlloSeEsiste;
+exports.controlloSeEsistePrenotazione = controlloSeEsistePrenotazione;

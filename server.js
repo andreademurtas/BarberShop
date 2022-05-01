@@ -7,6 +7,7 @@ const body_parser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const prenotazione = require("./prenotazione");
+const utente = require("./utente");
 
 const app = express();
 
@@ -70,13 +71,38 @@ app.get("/profilo", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
 });
 
-
 app.get("/login", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/login.html"));
 });
 
+app.post("/login", (req,res) => {
+    
+});
+
 app.get("/registrati", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/registrati.html"));
+});
+
+app.post("/registrati", (req,res) => {
+    if (!req.body.nome || !req.body.cognome || !req.body.email || !req.body.password || !req.body.password2 || !req.body.genere || !req.body.telefono) {
+	    req.session.error = "Compilare tutti i campi";
+	    return res.redirect("/registrati");
+	}
+	if (req.body.password !== req.body.password2) {
+	    req.session.error = "Le password non coincidono";
+	    return res.redirect("/registrati");
+	}
+    const result = utente.controlloSeEsisteUtente(db, req.body.email);
+    if (result == true) {
+        req.session.error = "Utente già registrato";
+	    return res.redirect("/registrati");
+    }
+    utente.inserisciUtente(db, req.body.nome, req.body.cognome, req.body.email, req.body.genere, req.body.telefono, bcrypt.hashSync(req.body.password, 10));
+    req.session.success = "Registrazione avvenuta con successo";
+    req.session.regenerate(function() {
+        req.session.user = req.body.email;
+	    res.redirect("/profilo");
+    });
 });
 
 
@@ -92,7 +118,7 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
     var sede = req.body.sede;
     var esiste = false;
     try {
-        esiste = await prenotazione.controlloSeEsiste(db, giorno, ora, sede)
+        esiste = await prenotazione.controlloSeEsistePrenotazione(db, giorno, ora, sede)
     }
     catch (e) {
         console.error(e);
