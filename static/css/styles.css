@@ -66,3 +66,18 @@ h1:after {
   margin-right: auto;
   margin-left: auto;
 }
+
+.frm{
+  max-width: 40%;
+}
+  
+  @media screen and (max-width: 900px) {
+    .hid{
+      display:none;
+      max-width: 0%;
+    }
+    .frm{
+      max-width:100%;
+    }
+    
+  }
