@@ -89,9 +89,11 @@ app.post("/prenotaSenzaLogin", (req,res) => {
     var telefono = req.body.telefono;
     var tipo = req.body.tipo;
     var sede = req.body.sede;
+    console.log(sede);
     var esiste;
     try {
-        esiste = prenotazione.controlloSeEsiste(db, giorno, ora);
+        prenotazione.controlloSeEsiste(db, giorno, ora, sede, (bool) => { esiste = bool; });
+		console.log(esiste);
     }
     catch (e) {
         console.error(e);

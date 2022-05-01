@@ -10,17 +10,17 @@ function inserisciPrenotazione(client, giorno, ora, nome, cognome, email, genere
     });
 }
 
-function controlloSeEsiste(client, giorno, ora, sede) {
+function controlloSeEsiste(client, giorno, ora, sede, fn) {
     client.query('SELECT * FROM prenotazioni WHERE giorno = $1 AND ora = $2 AND sede = $3', [giorno, ora, sede], (err, res) => {
 	if (err) {
         throw err;
 	} 
     else {
           if (res.rows.length > 0) {
-		      return true;
+		      fn(true);
 	      }
           else {
-              return false;
+              fn(false)
 		  }
        } 
     });
