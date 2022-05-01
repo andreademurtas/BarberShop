@@ -36,3 +36,5 @@ function changeColor(e){
 function colorBack(e){
     e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
 }
+
+// PER CHI SI STA OCCUPANDO DI QUESTO FILE: mettetelo in static e cambiate i path nei file html, nella root ci devono stare i file .js del server non quelli per lo stile

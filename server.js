@@ -64,7 +64,7 @@ function restrict(req, res, next) {
         next();
     } else {
         req.session.error = "Access denied!";
-        res.redirect("/");
+        res.sendFile(path.join(__dirname, "static/templates/nonautenticato.html"));
     }
 }
 
@@ -80,7 +80,7 @@ app.get("/prenota", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/prenota.html"));
 });
 
-app.get("/profilo", (req,res) => {
+app.get("/profilo", restrict, (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
 });
 
@@ -171,10 +171,6 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
 		    return;
 		}
     }
-});
-
-app.get("/restrict", restrict, (req,res) => {
-    res.send("<h1>Welcome to restricted area</h1>");
 });
 
 app.listen(8000, () => {
