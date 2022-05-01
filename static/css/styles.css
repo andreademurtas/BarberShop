@@ -48,23 +48,33 @@ h1:after {
 }
 
 .icon{
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 5px; 
+  margin-left: 1.5%;
+  margin-right:1.5%;
+  margin-top: 15%;
+  margin-bottom: 1.5%; 
+  width: 100px;
+  max-width: 125px;
+  height: auto;
+  
+}
+
+.icon2{
+  margin-left: 1.5%;
+  margin-right:1.5%;
+  margin-top: 15%;
+  margin-bottom: 1.5%; 
+  max-width: 125px;
+  height: auto;
+  
 }
 
 .p1 {
-  margin-right: 100px;
-  margin-top: 10px;
+  
+  margin-top: 10%;
   text-align:start;
-}
-
-.colonna{
-  -ms-flex-direction: column!important;
-  flex-direction: column!important;
-  margin-right: auto;
-  margin-left: auto;
+  max-height: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .frm{
@@ -72,6 +82,16 @@ h1:after {
 }
 .acc{
   max-width: 30%;
+}
+
+.mp{
+
+  max-width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80%;
+  width: 80%;
+
 }
   
 @media screen and (max-width: 700px) {
