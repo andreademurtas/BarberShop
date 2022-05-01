@@ -42,7 +42,20 @@ app.use(function(req, res, next) {
 });
 
 function authenticate(email, pass, fn) {
-
+    var check = utente.controlloSeEsisteUtente(db, email);
+    if (!check) {
+        return fn(null,null);
+	}
+    else {
+		db.query("SELECT passhash FROM utenti WHERE email = $1", [email]).then( (result) => {
+            if (!bcrypt.compareSync(pass, result.rows[0].passhash)) {
+		        return fn(null, null);
+		    }
+		    else {
+			    return fn(null, email);
+		    }
+		});
+	}
 }
 
 
@@ -75,8 +88,27 @@ app.get("/login", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/login.html"));
 });
 
-app.post("/login", (req,res) => {
-    
+app.post("/login", (req,res,next) => {
+    if (!req.body.email || !req.body.password) {
+	    req.session.error = "Inserire email e password";
+	    res.redirect("/login");
+    }
+    else {
+        authenticate(req.body.email, req.body.password, (err, user) => {
+            if (err) { return next(err); }
+		    if (user) {
+                req.session.regenerate(function(err) {
+                    req.session.user = user;
+				    req.session.success = "Login effettuato con successo";
+				    res.redirect("/profilo");
+				});   
+			}
+		    else {
+		        req.session.error = "Email o password errati";
+				res.redirect("/login");
+			}
+		});
+	}
 });
 
 app.get("/registrati", (req,res) => {
@@ -139,6 +171,10 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
 		    return;
 		}
     }
+});
+
+app.get("/restrict", restrict, (req,res) => {
+    res.send("<h1>Welcome to restricted area</h1>");
 });
 
 app.listen(8000, () => {

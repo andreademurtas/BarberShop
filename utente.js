@@ -28,5 +28,20 @@ async function controlloSeEsisteUtente(client, email) {
     return result.rows.length > 0;
 }
 
+async function getPasshash(client, email) {
+    try {
+	    const query = {
+	        text: 'SELECT passhash FROM utenti WHERE email = $1',
+	        values: [email]
+	    };
+	    var result = await client.query(query);
+    } catch (err) {
+	    console.log(err.stack);
+		process.exit(1);
+    }
+    return result.rows[0].passhash;
+}
+
 exports.inserisciUtente = inserisciUtente;
 exports.controlloSeEsisteUtente = controlloSeEsisteUtente;
+exports.getPasshash = getPasshash;
