@@ -179,7 +179,6 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
 });
 
 function ensureAuth(req, res, next) {
-  // isAuthenticated() is a Passport.js method on the request object
   if (req.session.user) {
     next();
   } else {
