@@ -11,6 +11,7 @@
   max-width: 100%;
 }
 
+body { padding-top: 100px; }
 
 .content {
   left: 0;
