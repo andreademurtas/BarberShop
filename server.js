@@ -22,6 +22,7 @@ db.connect( (err) => {
 
 app.use(express.static(path.join(__dirname, "static")));
 app.use(body_parser.urlencoded({ extended: true }));
+app.use(body_parser.json());
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -171,6 +172,23 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
 		    return;
 		}
     }
+});
+
+function ensureAuth(req, res, next) {
+  // isAuthenticated() is a Passport.js method on the request object
+  if (req.session.user) {
+    next();
+  } else {
+    return res.json(401, {error: 'user must be logged in.'});
+  }
+}
+
+app.get("/getUtente", ensureAuth, (req,res) => {
+    var email = req.session.user;
+    db.query("SELECT * FROM utenti WHERE email = $1", [email])
+		.then(result => {
+			res.status(200).json(result.rows);
+		}).catch(e => { console.error(e.stack) });
 });
 
 app.listen(8000, () => {
