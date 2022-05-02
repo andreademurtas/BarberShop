@@ -1,3 +1,5 @@
+const { redirect } = require("express/lib/response");
+
 function ValidaForm(){
     if((document.registrazione.nome.value=="Nome")){
         alert("Nome non valido");
@@ -37,4 +39,39 @@ function colorBack(e){
     e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
 }
 
-// PER CHI SI STA OCCUPANDO DI QUESTO FILE: mettetelo in static e cambiate i path nei file html, nella root ci devono stare i file .js del server non quelli per lo stile
+function bigIcon(e){
+    e.style.height="125px";
+    e.style.width="125px" ;
+    document.getElementById("space").style.height="25px";
+}
+
+function normIcon(e){
+    e.style.height="100px";
+    e.style.width="100px";
+    document.getElementById("space").style.height="50px";
+}
+
+function controlloPW(){
+    alert(document.reg.password.value);
+    if(document.reg.password.value!=document.reg.password_rip.value){
+        alert("le password non combaciano");
+        return false;
+    }
+    return true;
+}
+
+function myF(){
+    var name=new XMLHttpRequest();
+    name.open("GET","/getUtente",false);
+    name.send();
+    name = name.response.slice(1,name.responseText.length-1);
+    name = JSON.parse(name);
+    document.getElementById("myText").innerHTML= name.nome+" "+name.cognome;
+    document.getElementById("nome").innerHTML=name.nome;
+    document.getElementById("cognome").innerHTML=name.cognome;
+    document.getElementById("genere").innerHTML=name.genere;
+    document.getElementById("telefono").innerHTML=name.telefono;
+    document.getElementById("email").innerHTML=name.email;
+
+}
+

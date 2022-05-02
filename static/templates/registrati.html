@@ -8,24 +8,8 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" language="javascript">
-            function controlloPW(){
-                alert(document.reg.password.value);
-                if(document.reg.password.value!=document.reg.password_rip.value){
-                    alert("le password non combaciano");
-                    return false;
-                }
-                return true;
-            }
-            function changeColor(e){
-            e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white; box-shadow: 2px 2px 2px black";
-            
-            }
-
-            function colorBack(e){
-                e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;";
-            }
-        </script> 
+        <script type="text/javascript" src="templates/functions.js"></script>
+        
         
 </head>
 <body>

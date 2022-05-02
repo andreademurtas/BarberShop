@@ -8,22 +8,7 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" language="javascript">
-            function controlloPW(){
-                alert(document.reg.password.value);
-                if(document.reg.password.value!=document.reg.password_rip.value){
-                    alert("le password non combaciano");
-                    return false;
-                }
-                return true;
-            }
-
-            function myF(){
-                var name=session.name;
-                document.getElementById("myText").innerHTML= name;
-            }
-
-        </script> 
+        <script type="text/javascript" src="templates/functions.js"></script> 
 </head>
 <body onload="myF()">
 
@@ -54,84 +39,129 @@
     <div class="content text-center">
         <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
-    <div class="d-flex flex-column justify-content-center" style="margin-top:10%; margin-bottom:10%; width: 30%;margin-left: 35%; margin-right: 35%;">
-        <h2 style="margin-bottom:5%; text-align: center;">value <span id="myText"></span></h2>   
-        <form method="post" name="registrazione" action="/prenotaSenzaLogin" style="border: 2px solid #5a3a1a; padding-left:10%;padding-bottom: 10%; border-radius: 20px; padding-right:10%; " >
-            
-                <div class="row" >
+    <div class="d-flex flex-column flex-wrap justify-content-center">
+        <h2 style="margin-top:5%; text-align: center; "><span id="myText"></span></h2>  
+        
+        <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
+            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;">   
+                <form class="formProf2" method="post" name="registrazione" action="/prenotaSenzaLogin" >
                     
-                    <h2 class="h2" style="color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-left: 10%; margin-top: 10%;margin-bottom: 10%;">Prenota un appuntamento</h2>
-                        <select name="tipo"  style="margin-bottom: 1.5%;width: 100%;margin-left: 2.5%;" required>
-                            <option value="">Tipo di taglio</option>
-                            <option value="Taglio capelli">Taglio capelli</option>
-                            <option value="Taglio barba">Taglio barba</option>
-                        </select>
-                        <select name="sede" style="margin-bottom: 1.5%; margin-left: 2.5%;width: 100%;" required>
-                            <option value="">Sede</option>
-                            <option value="Ex Poste">Ex Poste</option>
-                            <option value="Città Universitaria">Città universitaria</option>
-                        </select>
-                        <input name="giorno" type="date" size="15%" style="margin-top:0.5%; margin-left: 2.5%;width: 100%;margin-bottom: 1.5%;" required>
-                        <select name="ora" style="margin-bottom: 1.5%; margin-left: 2.5%;width: 100%;" required>
-                            <option value='00:00'>00:00</option>
-                            <option value='00:30'>00:30</option>
-                            <option value='01:00'>01:00</option>
-                            <option value='01:30'>01:30</option>
-                            <option value='02:00'>02:00</option>
-                            <option value='02:30'>02:30</option>
-                            <option value='03:00'>03:00</option>
-                            <option value='03:30'>03:30</option>
-                            <option value='04:00'>04:00</option>
-                            <option value='04:30'>04:30</option>
-                            <option value='05:00'>05:00</option>
-                            <option value='05:30'>05:30</option>
-                            <option value='06:00'>06:00</option>
-                            <option value='06:30'>06:30</option>
-                            <option value='07:00'>07:00</option>
-                            <option value='07:30'>07:30</option>
-                            <option value='08:00'>08:00</option>
-                            <option value='08:30'>08:30</option>
-                            <option value='09:00'>09:00</option>
-                            <option value='09:30'>09:30</option>
-                            <option value='10:00'>10:00</option>
-                            <option value='10:30'>10:30</option>
-                            <option value='11:00'>11:00</option>
-                            <option value='11:30'>11:30</option>
-                            <option value='12:00'>12:00</option>
-                            <option value='12:30'>12:30</option>
-                            <option value='13:00'>13:00</option>
-                            <option value='13:30'>13:30</option>
-                            <option value='14:00'>14:00</option>
-                            <option value='14:30'>14:30</option>
-                            <option value='15:00'>15:00</option>
-                            <option value='15:30'>15:30</option>
-                            <option value='16:00'>16:00</option>
-                            <option value='16:30'>16:30</option>
-                            <option value='17:00'>17:00</option>
-                            <option value='17:30'>17:30</option>
-                            <option value='18:00'>18:00</option>
-                            <option value='18:30'>18:30</option>
-                            <option value='19:00'>19:00</option>
-                            <option value='19:30'>19:30</option>
-                            <option value='20:00'>20:00</option>
-                            <option value='20:30'>20:30</option>
-                            <option value='21:00'>21:00</option>
-                            <option value='21:30'>21:30</option>
-                            <option value='22:00'>22:00</option>
-                            <option value='22:30'>22:30</option>
-                            <option value='23:00'>23:00</option>
-                            <option value='23:30'>23:30</option>
-                        </select>
-                        
-                </div>
-                <div style="margin-top: 2%; text-align: center;">
-                    <input type="submit" value="Prenota" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" href="#" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top:2%; padding-bottom: 2%; color: white;">
-                </div>
-            
-        </form>
+                        <div class="row justify-content-center" >
+                            
+                            <h2 class="h2" style=" color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Prenota un appuntamento</h2>
+                                <select name="tipo"  style="margin-bottom: 1.5%;width: 80%;" required>
+                                    <option value="">Tipo di taglio</option>
+                                    <option value="Taglio capelli">Taglio capelli</option>
+                                    <option value="Taglio barba">Taglio barba</option>
+                                </select>
+                                <select name="sede" style="margin-bottom: 1.5%; ;width: 80%;" required>
+                                    <option value="">Sede</option>
+                                    <option value="Ex Poste">Ex Poste</option>
+                                    <option value="Città Universitaria">Città universitaria</option>
+                                </select>
+                                <input name="giorno" type="date" size="15%" style="margin-top:0.5%;;width: 80%;margin-bottom: 1.5%;" required>
+                                <select name="ora" style="margin-bottom: 1.5%;;width: 80%;margin-bottom:10%" required>
+                                    <option value='00:00'>00:00</option>
+                                    <option value='00:30'>00:30</option>
+                                    <option value='01:00'>01:00</option>
+                                    <option value='01:30'>01:30</option>
+                                    <option value='02:00'>02:00</option>
+                                    <option value='02:30'>02:30</option>
+                                    <option value='03:00'>03:00</option>
+                                    <option value='03:30'>03:30</option>
+                                    <option value='04:00'>04:00</option>
+                                    <option value='04:30'>04:30</option>
+                                    <option value='05:00'>05:00</option>
+                                    <option value='05:30'>05:30</option>
+                                    <option value='06:00'>06:00</option>
+                                    <option value='06:30'>06:30</option>
+                                    <option value='07:00'>07:00</option>
+                                    <option value='07:30'>07:30</option>
+                                    <option value='08:00'>08:00</option>
+                                    <option value='08:30'>08:30</option>
+                                    <option value='09:00'>09:00</option>
+                                    <option value='09:30'>09:30</option>
+                                    <option value='10:00'>10:00</option>
+                                    <option value='10:30'>10:30</option>
+                                    <option value='11:00'>11:00</option>
+                                    <option value='11:30'>11:30</option>
+                                    <option value='12:00'>12:00</option>
+                                    <option value='12:30'>12:30</option>
+                                    <option value='13:00'>13:00</option>
+                                    <option value='13:30'>13:30</option>
+                                    <option value='14:00'>14:00</option>
+                                    <option value='14:30'>14:30</option>
+                                    <option value='15:00'>15:00</option>
+                                    <option value='15:30'>15:30</option>
+                                    <option value='16:00'>16:00</option>
+                                    <option value='16:30'>16:30</option>
+                                    <option value='17:00'>17:00</option>
+                                    <option value='17:30'>17:30</option>
+                                    <option value='18:00'>18:00</option>
+                                    <option value='18:30'>18:30</option>
+                                    <option value='19:00'>19:00</option>
+                                    <option value='19:30'>19:30</option>
+                                    <option value='20:00'>20:00</option>
+                                    <option value='20:30'>20:30</option>
+                                    <option value='21:00'>21:00</option>
+                                    <option value='21:30'>21:30</option>
+                                    <option value='22:00'>22:00</option>
+                                    <option value='22:30'>22:30</option>
+                                    <option value='23:00'>23:00</option>
+                                    <option value='23:30'>23:30</option>
+                                </select>
+                                
+                        </div>
+                        <br>
+                        <br>
+                        <div style="margin-top: 2%; text-align: center;">
+                            <input type="submit" value="Prenota" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" href="#" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top:2%; padding-bottom: 2%; color: white;">
+                        </div>
+                    
+                </form>
+                <p style="text-align:center;">prova</p>
+            </div>
+            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;min-width: 500px;">
+                <form class="formProf" method="post" name="registrazione" action="/prenotaSenzaLogin" >
+                
+                    <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
+                    <p style="text-align: center;">(inserire i campi che si desiderano cambiare)</p>
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="d-flex flex-column justify-content-center" >     
+                            <div class="d-flex flex-row justify-content-center">
+                                <input class="p2" type="text" name="nome" style="width: 80%; margin-bottom: 1.5%;" placeholder="Nome" required>
+                                <p class="p2" id="nome" ></p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <input class="p2" type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 80%;" required>
+                                <p class="p2" id="cognome"></p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <select class="p2" name="genere" style="margin-bottom: 1.5%;width: 80%;"  required>
+                                    <option value="e">Genere</option>
+                                    <option value="M">M</option>
+                                    <option value="F">F</option>
+                                </select>
+                                <p class="p2" id="genere"></p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <input class="p2" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 80%;" required>
+                                <p class="p2" id="telefono"></p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <input class="p2" type="email" name="email" placeholder="Email" style="width: 80%;margin-bottom:10%" required>  
+                                <p class="p2" id="email"></p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div style="margin-top: 2%; text-align: center;">
+                        <input type="submit" value="Modifica" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" href="#" style=" border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top:2%; padding-bottom: 2%; color: white;">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="d-flex  flex-column flex-wrap justify-content-center" style=" bottom:0; width: 100%; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
+    <div class="d-flex  flex-column flex-wrap justify-content-center" style=" bottom:0 px; width: 100%; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
         <div>
                 <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
                 <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
