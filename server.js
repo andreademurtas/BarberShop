@@ -8,6 +8,8 @@ const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const prenotazione = require("./prenotazione");
 const utente = require("./utente");
+const res = require("express/lib/response");
+const { Router } = require("express");
 
 const app = express();
 
@@ -106,10 +108,12 @@ app.post("/login", (req,res,next) => {
 		    else {
 		        req.session.error = "Email o password errati";
 				res.redirect("/login");
+                
 			}
 		});
 	}
 });
+
 
 app.get("/registrati", (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/registrati.html"));
