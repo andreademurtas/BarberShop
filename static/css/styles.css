@@ -106,7 +106,7 @@ h1:after {
 }
 
 .formProf{
-  
+  flex-wrap: wrap;
   width: 85%;
   margin-right: 5%;
   margin-top:25%;
@@ -119,7 +119,7 @@ h1:after {
 }
 
 .formProf2{
-  
+  flex-wrap:wrap;
   width: 85%;
   margin-left:5%; 
   margin-right: 5%;

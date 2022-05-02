@@ -37,11 +37,11 @@
     <div class="content text-center">
         <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
-    <div class="d-flex flex-column justify-content-center">
+    <div class="d-flex flex-column flex-wrap justify-content-center">
         <h2 style="margin-top:5%; text-align: center; "><span id="myText"></span></h2>  
         
-        <div class="d-flex flex-row flex-wrap" style="width: 100%;"> 
-            <div class="d-flex flex-column justify-content-center" style="width: 50%;">   
+        <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
+            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;">   
                 <form class="formProf2" method="post" name="registrazione" action="/prenotaSenzaLogin" >
                     
                         <div class="row justify-content-center" >
@@ -119,12 +119,12 @@
                 </form>
                 <p style="text-align:center;">prova</p>
             </div>
-            <div class="d-flex flex-column justify-content-center" style="width: 50%;">
+            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;min-width: 500px;">
                 <form class="formProf" method="post" name="registrazione" action="/prenotaSenzaLogin" >
                 
                     <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
                     <p style="text-align: center;">(inserire i campi che si desiderano cambiare)</p>
-                    <div class="d-flex flex-row ">
+                    <div class="d-flex flex-row justify-content-center">
                         <div class="d-flex flex-column justify-content-center" >     
                             <div class="d-flex flex-row justify-content-center">
                                 <input class="p2" type="text" name="nome" style="width: 80%; margin-bottom: 1.5%;" placeholder="Nome" required>
