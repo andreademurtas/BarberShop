@@ -92,6 +92,8 @@ function myF(){
 
 }
 
+
+
 function checkInfo(e){
     var name=new XMLHttpRequest();
     name.open("GET","/getUtente",false);
@@ -103,7 +105,6 @@ function checkInfo(e){
     if(e.genere.value=="")e.genere.value=name.genere;
     if(e.telefono.value=="")e.telefono.value=name.telefono;
     if(e.email.value=="")e.email.value=name.email;
-    alert(e.telefono.value);
 }
 
 function logout(){

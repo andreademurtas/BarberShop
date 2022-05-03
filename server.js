@@ -185,6 +185,44 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
     }
 });
 
+app.post("/prenotaConLogin", async (req,res) => {
+    var giorno = req.body.giorno;
+    var ora = req.body.ora;
+    var nome = req.body.nome;
+    var cognome = req.body.cognome;
+    var email = req.session.user;
+    var genere = req.body.genere;
+    var telefono = req.body.telefono;
+    var tipo = req.body.tipo;
+    var sede = req.body.sede;
+    var esiste = false;
+    try {
+	esiste = await prenotazione.controlloSeEsistePrenotazione(db, giorno, ora, sede)
+    }
+    catch (e) {
+	console.error(e);
+	res.send("Errore nella prenotazione");
+		return;
+    }
+    if (esiste) {
+	res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/prenota'>Torna alla pagina precedente</a>");
+	}
+    else {
+		try{
+		    prenotazione.inserisciPrenotazione(db, giorno, ora, nome, cognome, email, genere, telefono, tipo, sede);
+	    res.redirect("/prenotazioneffettuata");
+	0	}
+		catch(e) {
+			console.log(e);
+			res.send("<p>Errore nell'inserimento della prenotazione</p>");
+		    return;
+		}
+    }
+});
+
+app.get("/prenotazioneffettuata", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/prenotazioneffettuata.html"));
+})
 
 function ensureAuth(req, res, next) {
   if (req.session.user) {
@@ -207,6 +245,19 @@ app.get("/getPrenotazioni", ensureAuth, (req,res) => {
     db.query("SELECT * FROM prenotazioni WHERE email = $1", [email])
 		.then(result => {
 			res.status(200).json(result.rows);
+		}).catch(e => { console.error(e.stack) });
+});
+
+
+app.post("/modificaUtente", ensureAuth, (req,res) => {
+    var email = req.session.user;
+    var nome = req.body.nome;
+    var cognome = req.body.cognome;
+    var genere = req.body.genere;
+    var telefono = req.body.telefono;
+    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5 WHERE email = $6", [nome, cognome, email, genere, telefono, req.session.user])
+		.then(result => {
+			res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
 		}).catch(e => { console.error(e.stack) });
 });
 

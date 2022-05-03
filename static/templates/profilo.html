@@ -47,7 +47,7 @@
         </div>
         <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
             <div class="d-flex flex-column  justify-content-start" style=" width: 50%;">   
-                <form class="formProf2" method="post" name="registrazione" action="/prenotaConLogin" style="height: 70%;">
+                <form class="formProf2"  method="post"  action="/prenotaConLogin" name="prenotazione" onsubmit="checkInfo(this)" style="height: 70%;">
                     
                         <div class="row justify-content-center" >
                             
@@ -64,20 +64,6 @@
                                 </select>
                                 <input name="giorno" type="date" size="15%" style="margin-top:0.5%;;width: 80%;margin-bottom: 1.5%;" required>
                                 <select name="ora" style="width: 80%;" required>
-                                    <option value='00:00'>00:00</option>
-                                    <option value='00:30'>00:30</option>
-                                    <option value='01:00'>01:00</option>
-                                    <option value='01:30'>01:30</option>
-                                    <option value='02:00'>02:00</option>
-                                    <option value='02:30'>02:30</option>
-                                    <option value='03:00'>03:00</option>
-                                    <option value='03:30'>03:30</option>
-                                    <option value='04:00'>04:00</option>
-                                    <option value='04:30'>04:30</option>
-                                    <option value='05:00'>05:00</option>
-                                    <option value='05:30'>05:30</option>
-                                    <option value='06:00'>06:00</option>
-                                    <option value='06:30'>06:30</option>
                                     <option value='07:00'>07:00</option>
                                     <option value='07:30'>07:30</option>
                                     <option value='08:00'>08:00</option>
@@ -105,15 +91,16 @@
                                     <option value='19:00'>19:00</option>
                                     <option value='19:30'>19:30</option>
                                     <option value='20:00'>20:00</option>
-                                    <option value='20:30'>20:30</option>
-                                    <option value='21:00'>21:00</option>
-                                    <option value='21:30'>21:30</option>
-                                    <option value='22:00'>22:00</option>
-                                    <option value='22:30'>22:30</option>
-                                    <option value='23:00'>23:00</option>
-                                    <option value='23:30'>23:30</option>
                                 </select>
                                 
+                                        <input hidden type="text" name="nome" style="width: 60%; margin-bottom: 1.5%;" placeholder="Nome">
+                                        <input hidden type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 60%;">
+                                        <select hidden name="genere" style="margin-bottom: 1.5%;width: 60%;">
+                                            <option value="e">Genere</option>
+                                            <option value="M">M</option>
+                                            <option value="F">F</option>
+                                        </select>
+                                        <input hidden type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 60%;">
                         </div>
                         <br>
                         <br>
@@ -130,7 +117,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column flex-wrap justify-content-start" style="width: 50%; min-width:500px;height: 100%;">
-                <form class="formProf" method="" axtion="" name="registrazione" onsubmit="checkInfo(this)" >
+                <form class="formProf" method="post" action="/modificaUtente" name="registrazione" onsubmit="checkInfo(this)" >
                 
                     <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
                     <p style="text-align: center;">(inserire i campi che si desiderano cambiare)</p>
