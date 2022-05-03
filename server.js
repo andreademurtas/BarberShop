@@ -178,40 +178,6 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
     }
 });
 
-app.post("/prenotaConLogin", async (req,res) => {
-    var giorno = req.body.giorno;
-    var ora = req.body.ora;
-    var nome = req.body.nome;
-    var cognome = req.session.cognome;
-    var email = req.session.email;
-    var genere = req.session.genere;
-    var telefono = req.session.telefono;
-    var tipo = req.body.tipo;
-    var sede = req.body.sede;
-    var esiste = false;
-    try {
-        esiste = await prenotazione.controlloSeEsistePrenotazione(db, giorno, ora, sede)
-    }
-    catch (e) {
-        console.error(e);
-        res.send("Errore nella prenotazione");
-		return;
-    }
-    if (esiste) {
-        res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/prenota'>Torna alla pagina precedente</a>");
-	}
-    else {
-		try{
-		    prenotazione.inserisciPrenotazione(db, giorno, ora, nome, cognome, email, genere, telefono, tipo, sede);
-		    res.redirect("/");
-		}
-		catch(e) {
-			console.log(e);
-			res.send("<p>Errore nell'inserimento della prenotazione</p>");
-		    return;
-		}
-    }
-});
 
 function ensureAuth(req, res, next) {
   if (req.session.user) {
@@ -224,6 +190,14 @@ function ensureAuth(req, res, next) {
 app.get("/getUtente", ensureAuth, (req,res) => {
     var email = req.session.user;
     db.query("SELECT * FROM utenti WHERE email = $1", [email])
+		.then(result => {
+			res.status(200).json(result.rows);
+		}).catch(e => { console.error(e.stack) });
+});
+
+app.get("/getPrenotazioni", ensureAuth, (req,res) => {
+    var email = req.session.user;
+    db.query("SELECT * FROM prenotazioni WHERE email = $1", [email])
 		.then(result => {
 			res.status(200).json(result.rows);
 		}).catch(e => { console.error(e.stack) });
