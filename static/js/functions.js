@@ -29,12 +29,12 @@ function ValidaForm(){
 }
 
 function changeColor(e){
-    e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white; box-shadow: 2px 2px 2px black";
+    e.style="border:0px; border-radius: 100px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white; box-shadow: 2px 2px 2px black";
     
 }
 
 function colorBack(e){
-    e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
+    e.style="border:0px; border-radius: 100px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
 }
 
 function changeColor2(e){
