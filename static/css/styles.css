@@ -107,7 +107,8 @@ h1:after {
 }
 
 .formProf{
-  flex-wrap: wrap;
+  
+ 
   width: 85%;
   margin-right: 5%;
   margin-left: 5%;
@@ -121,7 +122,7 @@ h1:after {
 }
 
 .formProf2{
-  flex-wrap:wrap;
+  
   width: 85%;
   margin-left:5%; 
   margin-right: 5%;
@@ -136,6 +137,18 @@ h1:after {
 }
 
   
+@media screen and (max-width: 980px) {
+
+  .formProf2{
+    width: 180%;
+  }
+  .formProf{
+    width: 150%;
+  }
+  
+}
+
+
 @media screen and (max-width: 700px) {
   .hid{
     display:none;
@@ -150,6 +163,16 @@ h1:after {
     
 }
 
+@media screen and (max-width: 820px){ 
+.formProf{
+  width: 100%;
+}}
+
+@media screen and (max-width:550px){ 
+  .formProf{
+    width: 85%;
+  }}
+  
 
 
 @media screen and (max-width:400px) {

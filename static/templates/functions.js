@@ -39,6 +39,15 @@ function colorBack(e){
     e.style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
 }
 
+function changeColor2(e){
+    e.style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white; box-shadow: 2px 2px 2px black";
+    
+}
+
+function colorBack2(e){
+    e.style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white;";
+}
+
 function bigIcon(e){
     e.style.height="125px";
     e.style.width="125px" ;
@@ -85,3 +94,23 @@ function myF(){
 
 }
 
+function checkInfo(e){
+    var name=new XMLHttpRequest();
+    name.open("GET","/getUtente",false);
+    name.send();
+    name = name.response.slice(1,name.responseText.length-1);
+    name = JSON.parse(name);
+    if(e.nome.value=="")e.nome.value=name.nome;
+    if(e.cognome.value=="")e.cognome.value=name.cognome;
+    if(e.genere.value=="")e.genere.value=name.genere;
+    if(e.telefono.value=="")e.telefono.value=name.telefono;
+    if(e.email.value=="")e.email.value=name.email;
+    alert(e.telefono.value);
+}
+
+function logout(){
+    var x = new XMLHttpRequest();
+    x.open("GET","/logout",false);
+    x.send();
+    window.location.replace("/profilo");
+}

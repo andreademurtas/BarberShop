@@ -40,11 +40,14 @@
         <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
     <div class="d-flex flex-column flex-wrap justify-content-center">
-        <h2 style=" text-align: center;color: #987654 ; font-size:250% ; font-family: 'Times New Roman', Times, serif; margin-top: 5%; padding-left: 10%; padding-right: 10%;"><span id="myText"></span></h2>  
-        
+        <div class="d-flex flex-row flex-wrap justify-content-start" style="width: 100%;margin-top: 3%;">
+             
+            <input type="button" value="Logout" onclick="logout()" onmouseover="changeColor2(this)" onmouseleave="colorBack2(this)" style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white;">
+            <h2 style=" text-align: start;width: 50%; color: #987654 ; font-size:250% ; font-family: 'Times New Roman', Times, serif; margin-top: 5%; padding-left: 3%; padding-right: 0%;"><span id="myText"></span></h2> 
+        </div>
         <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
-            <div class="d-flex flex-column flex-wrap justify-content-start" style=" width: 50%;">   
-                <form class="formProf2" method="post" name="registrazione" action="/prenotaConLogin" >
+            <div class="d-flex flex-column  justify-content-start" style=" width: 50%;">   
+                <form class="formProf2" method="post" name="registrazione" action="/prenotaConLogin" style="height: 70%;">
                     
                         <div class="row justify-content-center" >
                             
@@ -60,7 +63,7 @@
                                     <option value="Città Universitaria">Città universitaria</option>
                                 </select>
                                 <input name="giorno" type="date" size="15%" style="margin-top:0.5%;;width: 80%;margin-bottom: 1.5%;" required>
-                                <select name="ora" style="margin-bottom: 1.5%;;width: 80%;margin-bottom:10%" required>
+                                <select name="ora" style="width: 80%;" required>
                                     <option value='00:00'>00:00</option>
                                     <option value='00:30'>00:30</option>
                                     <option value='01:00'>01:00</option>
@@ -119,30 +122,30 @@
                         </div>
                     
                 </form>
-                <div class="d-flex flex-column justify-content-center formProf">
+                <div class="d-flex flex-column justify-content-center formProf2" style="height: 30%;margin-top: 0%;">
                     <p style= "text-align:center;color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 3%;">Prenotazioni</p>
-                    <div class="d-flex flex-row justify-content-center">
+                    <!--div class="d-flex flex-column justify-content-center"-->
                         <p style="text-align:start;"><span id="myPren"></span></p>
-                    </div>
+                    <!--/div-->
                 </div>
             </div>
-            <div class="d-flex flex-column flex-wrap justify-content-start" style="width: 50%;min-width: 500px;">
-                <form class="formProf" method="post" name="registrazione" action="/prenotaSenzaLogin" >
+            <div class="d-flex flex-column flex-wrap justify-content-start" style="width: 50%; min-width:500px;height: 100%;">
+                <form class="formProf" method="" axtion="" name="registrazione" onsubmit="checkInfo(this)" >
                 
                     <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
                     <p style="text-align: center;">(inserire i campi che si desiderano cambiare)</p>
                     <div class="d-flex flex-row justify-content-center">
                         <div class="d-flex flex-column justify-content-center" >     
                             <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="text" name="nome" style="width: 80%; margin-bottom: 1.5%;" placeholder="Nome" required>
+                                <input class="p2" type="text" name="nome" style="width: 80%; margin-bottom: 1.5%;" placeholder="Nome" >
                                 <p class="p2" id="nome" ></p>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 80%;" required>
+                                <input class="p2" type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 80%;" >
                                 <p class="p2" id="cognome"></p>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
-                                <select class="p2" name="genere" style="margin-bottom: 1.5%;width: 80%;"  required>
+                                <select class="p2" name="genere" style="margin-bottom: 1.5%;width: 80%;"  >
                                     <option value="e">Genere</option>
                                     <option value="M">M</option>
                                     <option value="F">F</option>
@@ -150,11 +153,11 @@
                                 <p class="p2" id="genere"></p>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 80%;" required>
+                                <input class="p2" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 80%;" >
                                 <p class="p2" id="telefono"></p>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="email" name="email" placeholder="Email" style="width: 80%;margin-bottom:10%" required>  
+                                <input class="p2" type="email" name="email" placeholder="Email" style="width: 80%;margin-bottom:10%">  
                                 <p class="p2" id="email"></p>
                             </div> 
                         </div>
@@ -166,7 +169,7 @@
             </div>
         </div>
     </div>
-    <div class="d-flex  flex-column flex-wrap justify-content-center" style=" bottom:0 px; width: 100%; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
+    <div class="d-flex  flex-column flex-wrap justify-content-center" style=" bottom:0 ;position: absolute;width: 100%; width: 100%; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
         <div>
                 <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
                 <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
