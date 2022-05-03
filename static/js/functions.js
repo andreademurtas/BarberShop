@@ -1,5 +1,3 @@
-const { redirect } = require("express/lib/response");
-
 function ValidaForm(){
     if((document.registrazione.nome.value=="Nome")){
         alert("Nome non valido");
