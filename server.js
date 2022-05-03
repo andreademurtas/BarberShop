@@ -143,6 +143,13 @@ app.post("/registrati", (req,res) => {
 });
 
 
+app.get("/logout", (req,res) => {
+    req.session.destroy(function() {
+	res.redirect("/");
+	});
+});
+
+
 app.post("/prenotaSenzaLogin", async (req,res) => {
     var giorno = req.body.giorno;
     var ora = req.body.ora;
