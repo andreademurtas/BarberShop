@@ -110,7 +110,8 @@ h1:after {
   flex-wrap: wrap;
   width: 85%;
   margin-right: 5%;
-  margin-top:25%;
+  margin-left: 5%;
+  margin-top:10%;
   margin-bottom: 10%;
   border: 2px solid #5a3a1a; 
   padding-left:8%;
@@ -124,13 +125,13 @@ h1:after {
   width: 85%;
   margin-left:5%; 
   margin-right: 5%;
-  margin-top: 0%;
+  margin-top: 10%;
   margin-bottom: 2%;
   border: 2px solid #5a3a1a; 
-  padding-left:8%;
+  padding-left:10%;
   padding-bottom: 2%; 
   border-radius: 20px; 
-  padding-right:8%;
+  padding-right:10%;
   
 }
 

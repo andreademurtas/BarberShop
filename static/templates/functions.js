@@ -73,5 +73,15 @@ function myF(){
     document.getElementById("telefono").innerHTML=name.telefono;
     document.getElementById("email").innerHTML=name.email;
 
+    var pren=new XMLHttpRequest();
+    pren.open("GET","/getPrenotazioni",false);
+    pren.send();
+    //pren = pren.response.slice(1,pren.responseText.length-1);
+    pren = JSON.parse(pren.response);
+    //document.getElementById("myPren").innerHTML=pren[0];
+    for(i=0;i<pren.length;i++){
+        document.getElementById("myPren").innerHTML=document.getElementById("myPren").innerHTML+" "+pren[i].giorno.slice(0,10)+"   "+pren[i].tipo+"   "+pren[i].ora.slice(0,5)+"   "+pren[i].sede+"<br>";
+    }
+
 }
 
