@@ -40,10 +40,10 @@
         <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
     </div>
     <div class="d-flex flex-column flex-wrap justify-content-center">
-        <h2 style="margin-top:5%; text-align: center; "><span id="myText"></span></h2>  
+        <h2 style=" text-align: center;color: #987654 ; font-size:250% ; font-family: 'Times New Roman', Times, serif; margin-top: 5%; padding-left: 10%; padding-right: 10%;"><span id="myText"></span></h2>  
         
         <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
-            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;">   
+            <div class="d-flex flex-column flex-wrap justify-content-start" style=" width: 50%;">   
                 <form class="formProf2" method="post" name="registrazione" action="/prenotaConLogin" >
                     
                         <div class="row justify-content-center" >
@@ -119,9 +119,14 @@
                         </div>
                     
                 </form>
-                <p style="text-align:center;">prova</p>
+                <div class="d-flex flex-column justify-content-center formProf">
+                    <p style= "text-align:center;color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 3%;">Prenotazioni</p>
+                    <div class="d-flex flex-row justify-content-center">
+                        <p style="text-align:start;"><span id="myPren"></span></p>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 50%;min-width: 500px;">
+            <div class="d-flex flex-column flex-wrap justify-content-start" style="width: 50%;min-width: 500px;">
                 <form class="formProf" method="post" name="registrazione" action="/prenotaSenzaLogin" >
                 
                     <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
