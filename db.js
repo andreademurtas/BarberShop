@@ -3,7 +3,7 @@ const dbconfig = require('./dbconfig');
 
 const db = new Client({
   user: 'postgres',
-  host: 'ec2-107-23-144-168.compute-1.amazonaws.com',
+  host: 'ec2-44-197-129-73.compute-1.amazonaws.com',
   database: 'barbershop',
   password: dbconfig.dbpassword,
   port: 5432,
