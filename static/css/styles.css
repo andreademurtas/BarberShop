@@ -1,7 +1,7 @@
 .bgimage {
-  background-image: url("../img/barbershop_blurred.jpg");
+  background-image: url("../img/barbershop_blurred_small.jpg");
   background-position: center;
-  height: 700px;
+  min-height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   left: 0;
@@ -9,6 +9,7 @@
   z-index: 1;
   display: block;
   max-width: 100%;
+  text-align: center;
 }
 
 body { padding-top: 100px; }
@@ -89,6 +90,67 @@ h1:after {
 }
 
 
+#homepage_left_col{
+  width:50%;
+  text-align: justify;
+  margin-left:5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#homepage_right_col{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#homepage_orari{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+#hompage_contatti{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 1170px) {
+  #homepage_left_col{width:100%; margin-left: 10%; margin-right: 10%;}
+  #homepage_right_col{min-height: 350px;margin-top: 0px;}
+
+}  
+
+
+#homepage_titolo{
+  color: white;
+  font-size:6vw;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+}
+
+#homepage_bottone{
+  width: 200px;
+  height: 50px;
+  margin-bottom: auto;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.775);
+  border:none;
+  color:#5a3a1a;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  #homepage_bottone{max-width:140px;height: 30px;font-size: 10px; line-height:15px;border-radius: 15px;}
+  #homepage_titolo{font-size: 10vw;}
+}
+
+
 .frm{
   max-width: 40%;
 }
@@ -136,7 +198,6 @@ h1:after {
   
 }
 
-  
 @media screen and (max-width: 980px) {
 
   .formProf2{
@@ -150,10 +211,7 @@ h1:after {
 
 
 @media screen and (max-width: 700px) {
-  .hid{
-    display:none;
-    max-width: 0%;
-  }
+  
   .frm{
     max-width:100%;
   }
@@ -181,3 +239,143 @@ h1:after {
   }
 }
 
+
+
+
+.inputPrenota {
+  width: 50%;
+  margin-bottom: 5%;
+  min-width: 120px;
+  
+}
+
+
+.box_prenotazione{
+  border: 2px solid #5a3a1a; 
+  border-radius: 20px; 
+  padding-top: 5%; 
+  padding-bottom: 5%; 
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+.semiriga{
+  width:50%;
+  height: 100%;
+}
+
+.galleria{
+  width:30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width:1145px) {
+  .semiriga{
+    width: 100%;
+    height: fit-content;
+  }
+  .box_prenotazione{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  .galleria{
+    width:60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .location-listing:focus .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:focus .location-image img {
+    filter: blur(2px);
+  }
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: space-evenly;
+  align-content:space-around;
+
+}  
+
+.location-listing {
+  width: 100%;
+  height: auto;
+  position:relative;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.img_taglio{
+  height: auto;
+  width:100%;
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(92, 68, 16, 0.4);
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+
+.barraFinePagina{
+  background-color: #987654;
+  border-top-left-radius: 25px; 
+  border-top-right-radius: 25px;
+  bottom:0;
+  width: 100%;
+}
+
+.testoFinePagina{
+  margin: 6%;
+  color: white; 
+  font-size: 1vw;
+  text-align:center
+}

@@ -18,7 +18,7 @@ db.connect( (err) => {
     if (err) {
 	  console.error("Errore connessione al database");
 	  console.error(err);
-	  process.exit(1);
+	  //process.exit(1);
 	}
 });
 
@@ -85,6 +85,10 @@ app.get("/prenota", (req,res) => {
 
 app.get("/profilo", restrict, (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
+});
+
+app.get("/temp", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/Def_Template.html"));
 });
 
 app.get("/login", (req,res) => {
