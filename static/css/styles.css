@@ -1,3 +1,9 @@
+:root{--main_color:#473a30;}
+
+
+
+
+
 .bgimage {
   background-image: url("../img/barbershop_blurred_small.jpg");
   background-position: center;
@@ -89,6 +95,14 @@ h1:after {
   min-width: 50%;
 }
 
+.grafica_titolo{
+  background-color: var(--main_color);
+  color: white;
+  font-size:6vw;
+  font-family: 'Times New Roman', Times, serif;
+  padding-bottom: 5px;
+  border-radius: 100px;
+}
 
 #homepage_left_col{
   width:50%;
@@ -139,7 +153,7 @@ h1:after {
   margin-left: auto;
   background-color: rgba(255, 255, 255, 0.775);
   border:none;
-  color:#5a3a1a;
+  color:var(--main_color);
   font-size: 14px;
   text-align: center;
   border-radius: 25px;
@@ -176,7 +190,7 @@ h1:after {
   margin-left: 5%;
   margin-top:10%;
   margin-bottom: 10%;
-  border: 2px solid #5a3a1a; 
+  border: 2px solid  var(--main_color)_color; 
   padding-left:8%;
   padding-bottom: 2%; 
   border-radius: 20px; 
@@ -190,7 +204,7 @@ h1:after {
   margin-right: 5%;
   margin-top: 10%;
   margin-bottom: 2%;
-  border: 2px solid #5a3a1a; 
+  border: 2px solid var(--main_color); 
   padding-left:10%;
   padding-bottom: 2%; 
   border-radius: 20px; 
@@ -251,7 +265,7 @@ h1:after {
 
 
 .box_prenotazione{
-  border: 2px solid #5a3a1a; 
+  border: 2px solid var(--main_color); 
   border-radius: 20px; 
   padding-top: 5%; 
   padding-bottom: 5%; 
@@ -366,7 +380,7 @@ h1:after {
 
 
 .barraFinePagina{
-  background-color: #987654;
+  background-color: #473a30;
   border-top-left-radius: 25px; 
   border-top-right-radius: 25px;
   bottom:0;
