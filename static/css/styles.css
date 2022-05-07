@@ -1,9 +1,25 @@
 :root{--main_color:#473a30;}
 
+/*Classi per le animazioni jquery*/
+.jqNavbar{
+  display: none;
+}
+.pos1{
+  display: none;
+}
+.pos2{
+  display: none;
+}
+.pos3{
+  display: none;
+}
+.pos4{
+  display: none;
+}
 
 
 
-
+/*Classi di stile fogli html*/
 .bgimage {
   background-image: url("../img/barbershop_blurred_small.jpg");
   background-position: center;
@@ -156,7 +172,8 @@ h1:after {
   margin-top: 5%;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgba(255, 255, 255);
+  opacity: 80%;
   border:none;
   color:var(--main_color);
   font-size: 14px;
