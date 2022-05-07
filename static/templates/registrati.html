@@ -41,9 +41,9 @@
     </div>
     <br>
     <br>
-    <div class="d-flex flex-row justify-content-center" style="text-align: center;">
-        <div class="d-flex flex-column">
-            <div class="d-flex flex-row justify-content-center" style="text-align: center;margin-bottom: 30px; border: 2px solid #5a3a1a; padding-left: 25px;padding-bottom: 25px; border-radius: 20px; padding-right:20px ; padding-top: 25px;">
+    <div class="d-flex flex-row" style="text-align: center">
+        <div class="d-flex flex-column" style="width: 100%;">
+            <div class="d-flex box_registrazione">
                 <table>
                     <form action="/registrati" method="post" name="registrazione" >
                         <tr><td>
@@ -52,32 +52,32 @@
                             <p style="margin-top: 20px">Inserisci tuoi dati personali </p>
                         </td></tr>
                         <tr><td>
-                            <input type="text" name="nome" size="20" style="margin-bottom: 5px;" placeholder="Nome" required>
+                            <input class="casella_registrazione" type="text" name="nome" size="20" placeholder="Nome" required>
                         </td></tr>
                         <tr><td>
-                            <input type="text" name="cognome" size="20" style="margin-bottom: 5px;" placeholder="Cognome" required>
+                            <input class="casella_registrazione" type="text" name="cognome" size="20" placeholder="Cognome" required>
                         </td></tr>
                         <tr style="text-align: left;"><td>
-                            <select name="genere" style="margin-bottom: 5px;" required>
-                                <option value="M">M</option>
-                                <option value="F">F</option>
+                            <select class="casella_registrazione"name="genere" required>
+                                <option value="M">Maschio</option>
+                                <option value="F">Femmina</option>
                             </select>
                         </td></tr>
                         <tr><td>
-                            <input type="email" name="email" size="20" style="margin-bottom: 5px;" placeholder="Email" required>
+                            <input class="casella_registrazione" type="email" name="email" size="20" placeholder="Email" required>
                         </td></tr>
                         <tr><td>
-                            <input type="tel" name="telefono" size="20" style="margin-bottom: 5px;" placeholder="Telefono" required>
+                            <input class="casella_registrazione" type="tel" name="telefono" size="20"  placeholder="Telefono" required>
                         </td></tr>
                         <tr><td>
-                            <input type="password" name="password" size="20" style="margin-bottom: 5px;" placeholder="Password" required>
+                            <input class="casella_registrazione" type="password" name="password" size="20"  placeholder="Password" required>
                         </td></tr>
                         <tr><td>
-                            <input type="password" name="password2" size="20" style="margin-bottom: 5px;" placeholder="Ripeti Password" required>
+                            <input class="casella_registrazione" type="password" name="password2" size="20" placeholder="Ripeti Password" required>
                         </td></tr>
                         <tr><td></td></tr>
                         <tr><td>
-                                <input type="submit" value="Registrati" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
+                                <input class="bottone_generico" type="submit" value="Registrati" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px;">
                         </td></tr>
                         <tr><td>
                             <a class="nav-link" href="login"><small>Hai già un account?</small></a>
@@ -85,7 +85,7 @@
                 </table>
             </div>
             
-            <div class="d-flex flex-row justify-content-center" style="text-align: center; max-width:fit-content;">
+            <div class="d-flex flex-row justify-content-center" id="nota_registrazione">
                 <p style="line-height: 0.9; margin-bottom: 50px;"><small>
                     I tuoi dati verranno trattati nella rispetto della normativa della privacy. Salviamo i tuoi dati per rendere il servizio più semplice all'utente
                 </small></p>
