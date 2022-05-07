@@ -59,7 +59,6 @@ function normIcon(e){
 }
 
 function controlloPW(){
-    alert(document.reg.password.value);
     if(document.reg.password.value!=document.reg.password_rip.value){
         alert("le password non combaciano");
         return false;
