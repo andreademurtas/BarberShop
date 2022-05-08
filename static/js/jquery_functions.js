@@ -1,11 +1,12 @@
 $(document).ready(function(){
-
+    $("#navbar_barber").hide();
     //Animazioni comparsa delle sezioni della pagina
     $(".pos1").fadeIn().delay( 300 );  
     $(".pos2").fadeIn().delay( 300 );
     $(".pos3").fadeIn().delay( 300 );
     $(".pos4").fadeIn().delay( 300 );
-    $(".jqNavbar").slideDown("slow");
+    
+ 
 
 
 
