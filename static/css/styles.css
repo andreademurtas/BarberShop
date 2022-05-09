@@ -1,5 +1,126 @@
 :root{--main_color:#473a30;}
 
+@media screen and (max-width:1145px) {
+  .semiriga{
+    width: 100%;
+    height: fit-content;
+  }
+  .box_prenotazione{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  .galleria{
+    width:60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .location-listing:focus .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:focus .location-image img {
+    filter: blur(2px);
+  }
+}
+
+@media screen and (max-width:800px) {
+  .box_registrazione{
+    width: 70%;
+  }
+  #nota_registrazione{
+    width: 60%;
+  }
+}
+
+
+@media screen and (max-width:400px) {
+  .box_registrazione{
+    width: 80%;
+  }
+  #nota_registrazione{
+    width: 80%;
+  }
+  .box_nonAutenticato{
+    max-width: 80%;
+  }
+  .data{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar-nav>li{font-size: 16px;}
+}
+
+@media screen and (max-width: 1170px) {
+  #homepage_left_col{width:100%; margin-left: 10%; margin-right: 10%;}
+  #homepage_right_col{min-height: 350px;margin-top: 0px;}
+
+}
+
+@media screen and (max-width: 500px) {
+  #homepage_bottone{max-width:140px;height: 30px;font-size: 10px; line-height:15px;border-radius: 15px;}
+  #homepage_titolo{font-size: 10vw;}
+}
+
+@media screen and (max-width:1200px) {
+  .chisiamo_mappa{
+    height: 450px;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .chisiamo_mappa{
+    height: 300px;
+  }
+
+  .p2{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .chisiamo_mappa{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10%;
+  }
+}
+
+/*@media screen and (max-width: 980px) {
+
+  .formProf2{
+    width: 180%;
+  }
+  .formProf{
+    width: 150%;
+  }
+  
+}
+@media screen and (max-width: 820px){ 
+  .formProf{
+    width: 100%;
+  }}
+  
+  @media screen and (max-width:550px){ 
+    .formProf{
+      width: 85%;
+    }}*/
+
+
+@media screen and (max-width: 700px) {
+  
+  .frm{
+    max-width:100%;
+  }
+  .box_nonAutenticato{
+    max-width: 50%;
+  }
+    
+}
+
 /*Classi per le animazioni jquery*/
 .jqNavbar{
   /*display: none;*/
@@ -71,9 +192,7 @@ h1:after {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1050px) {
-  .navbar-nav>li{font-size: 16px;}
-}
+
 
 .icon{
   margin-left: 13px;
@@ -108,11 +227,11 @@ h1:after {
 .p2{
   margin-top: 5%;
   text-align:start;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 50%;
-  max-width: 50%;
-  min-width: 50%;
+  margin-left: 5%;
+  margin-right: 50%;
+  width: 40%;
+  max-width: 40%;
+  min-width: 40%;
 }
 
 .grafica_titolo{
@@ -151,11 +270,7 @@ h1:after {
   margin-right: 5%;
 }
 
-@media screen and (max-width: 1170px) {
-  #homepage_left_col{width:100%; margin-left: 10%; margin-right: 10%;}
-  #homepage_right_col{min-height: 350px;margin-top: 0px;}
 
-}  
 
 
 #homepage_titolo{
@@ -181,10 +296,7 @@ h1:after {
   border-radius: 25px;
 }
 
-@media screen and (max-width: 500px) {
-  #homepage_bottone{max-width:140px;height: 30px;font-size: 10px; line-height:15px;border-radius: 15px;}
-  #homepage_titolo{font-size: 10vw;}
-}
+
 
 
 .chisiamo_mappa{
@@ -193,25 +305,7 @@ h1:after {
   text-align: center;
 }
 
-@media screen and (max-width:1200px) {
-  .chisiamo_mappa{
-    height: 450px;
-  }
-}
 
-@media screen and (max-width:900px) {
-  .chisiamo_mappa{
-    height: 300px;
-  }
-}
-
-@media screen and (max-width:600px) {
-  .chisiamo_mappa{
-    width: 100%;
-    height: 350px;
-    margin-bottom: 10%;
-  }
-}
 
 .chisiamo_icone{
   text-align: center;
@@ -302,24 +396,6 @@ h1:after {
   
 }
 
-@media screen and (max-width:800px) {
-  .box_registrazione{
-    width: 70%;
-  }
-  #nota_registrazione{
-    width: 60%;
-  }
-}
-
-
-@media screen and (max-width:400px) {
-  .box_registrazione{
-    width: 80%;
-  }
-  #nota_registrazione{
-    width: 80%;
-  }
-}
 
 
 .frm{
@@ -339,25 +415,25 @@ h1:after {
 .formProf{
   
  
-  width: 85%;
+  
   margin-right: 5%;
   margin-left: 5%;
-  margin-top:10%;
-  margin-bottom: 10%;
+  margin-top:0%;
+  margin-bottom: 5%;
   border: 2px solid  var(--main_color); 
-  padding-left:8%;
+  padding-left:2%;
   padding-bottom: 2%; 
   border-radius: 20px; 
-  padding-right:8%;
+  padding-right:2%;
 }
 
 .formProf2{
   
-  width: 85%;
+ 
   margin-left:5%; 
   margin-right: 5%;
-  margin-top: 10%;
-  margin-bottom: 2%;
+  margin-top: 0%;
+  margin-bottom: 5%;
   border: 2px solid var(--main_color); 
   padding-left:10%;
   padding-bottom: 2%; 
@@ -366,46 +442,7 @@ h1:after {
   
 }
 
-@media screen and (max-width: 980px) {
 
-  .formProf2{
-    width: 180%;
-  }
-  .formProf{
-    width: 150%;
-  }
-  
-}
-
-
-@media screen and (max-width: 700px) {
-  
-  .frm{
-    max-width:100%;
-  }
-  .box_nonAutenticato{
-    max-width: 50%;
-  }
-    
-}
-
-@media screen and (max-width: 820px){ 
-.formProf{
-  width: 100%;
-}}
-
-@media screen and (max-width:550px){ 
-  .formProf{
-    width: 85%;
-  }}
-  
-
-
-@media screen and (max-width:400px) {
-  .box_nonAutenticato{
-    max-width: 80%;
-  }
-}
 
 
 
@@ -441,30 +478,7 @@ h1:after {
 }
 
 
-@media screen and (max-width:1145px) {
-  .semiriga{
-    width: 100%;
-    height: fit-content;
-  }
-  .box_prenotazione{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  .galleria{
-    width:60%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
 
-  .location-listing:focus .location-title {
-    opacity: 1;
-  }
-  
-  .location-listing:focus .location-image img {
-    filter: blur(2px);
-  }
-}
 
 .grid-container {
   height: 100%;
