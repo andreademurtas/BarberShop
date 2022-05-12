@@ -2,14 +2,25 @@ $(document).ready(function(){
     
 
     //Homepage
-    $("#navbar_barber").hide();
+    $("#homepage_navbar").hide();
     $("#homepage_titolo").hide();
     $("#homepage_bottone").hide();
 
-    $("#navbar_barber").slideDown("slow");
+    $("#homepage_navbar").slideDown("slow");
     $("#homepage_titolo").fadeIn(2000);
     $("#homepage_bottone").fadeIn(4000);
-    
+
+    //Chi siamo
+    $("#chisiamo_titolo").hide();
+    $("#chisiamo_p1").hide();
+    $("#chisiamo_p2").hide();
+    $("#chisiamo_p3").hide();
+
+
+    $("#chisiamo_titolo").slideDown("slow");
+    $("#chisiamo_p1").fadeIn(1000);
+    $("#chisiamo_p2").fadeIn(2000);
+    $("#chisiamo_p3").fadeIn(3000);
     
     /*$(window).scroll(function() {
         if ($(document).scrollTop() > 200) {
