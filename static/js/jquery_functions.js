@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+    $(".grafica_titolo").hide().fadeIn("slow");
 
     //Homepage
     $("#homepage_navbar").hide();
@@ -11,27 +12,25 @@ $(document).ready(function(){
     $("#homepage_bottone").fadeIn(4000);
 
     //Chi siamo
-    $("#chisiamo_titolo").hide();
     $("#chisiamo_p1").hide();
     $("#chisiamo_p2").hide();
     $("#chisiamo_p3").hide();
 
-
-    $("#chisiamo_titolo").slideDown("slow");
     $("#chisiamo_p1").fadeIn(1000);
     $("#chisiamo_p2").fadeIn(2000);
     $("#chisiamo_p3").fadeIn(3000);
     
-    /*$(window).scroll(function() {
-        if ($(document).scrollTop() > 200) {
-          $("#homepage_elem1").fadeIn(1000).delay(500);
-          $("#homepage_elem2").fadeIn(1000).delay(500);
-          $("#homepage_elem3").fadeIn(1000);
-          
-        }
-    });*/
+    //Prenota Appuntamento
+    $(".prenota_altro").hide();
+    $("#prenota_taglio1").hide();
+    $("#prenota_taglio2").hide();
+    $("#prenota_taglio3").hide();
 
-    
+    $(".prenota_altro").fadeIn("slow");
+    $("#prenota_taglio1").slideDown(1000);
+    $("#prenota_taglio2").slideDown(2000);
+    $("#prenota_taglio3").slideDown(3000);
+
  
 
 
