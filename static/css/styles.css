@@ -1,5 +1,115 @@
 :root{--main_color:#473a30;}
 
+/*----------------------Homepage--------------------*/
+
+.bgimage {
+  background-image: url("../img/barbershop_blurred_small.jpg");
+  background-position: center;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+#homepage_orari{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+#hompage_contatti{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media screen and (min-width: 1171px){
+  #homepage_left_col{
+    width:50%;
+    text-align: justify;
+    margin-left:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  #homepage_right_col{
+    margin:5%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  #homepage_left_col{
+    width:100%; 
+    margin-left:0%; 
+    margin-right:0px; 
+    padding-left: 10%; 
+    padding-right:10%;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  #homepage_right_col{
+    width:100%; 
+    min-height: 350px;
+    margin-top: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-width: 501px){
+  #homepage_titolo{
+    color: white;
+    font-size:6vw;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+  }
+  #homepage_bottone{
+    width: 200px;
+    height: 50px;
+    margin-bottom: auto;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255);
+    opacity: 80%;
+    border:none;
+    color:var(--main_color);
+    font-size: 14px;
+    text-align: center;
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #homepage_titolo{
+    color: white;
+    font-size:10vw;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+  }
+  #homepage_bottone{max-width:140px;
+    width: 200px;
+    height: 30px;
+    margin-bottom: auto;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255);
+    opacity: 80%;
+    border:none;
+    color:var(--main_color);
+    font-size: 10px;
+    text-align: center;
+    border-radius: 25px;
+    line-height:15px;
+  }
+}
+
+/*---------------------------------------------------*/
+
 @media screen and (max-width:1145px) {
   .semiriga{
     width: 100%;
@@ -52,17 +162,6 @@
 
 @media screen and (max-width: 1050px) {
   .navbar-nav>li{font-size: 16px;}
-}
-
-@media screen and (max-width: 1170px) {
-  #homepage_left_col{width:100%; margin-left: 10%; margin-right: 10%;}
-  #homepage_right_col{min-height: 350px;margin-top: 0px;}
-
-}
-
-@media screen and (max-width: 500px) {
-  #homepage_bottone{max-width:140px;height: 30px;font-size: 10px; line-height:15px;border-radius: 15px;}
-  #homepage_titolo{font-size: 10vw;}
 }
 
 @media screen and (max-width:1200px) {
@@ -121,39 +220,12 @@
     
 }
 
-/*Classi per le animazioni jquery*/
-.jqNavbar{
-  /*display: none;*/
-}
-.pos1{
-  display: none;
-}
-.pos2{
-  display: none;
-}
-.pos3{
-  display: none;
-}
-.pos4{
-  display: none;
-}
 
 
 
-/*Classi di stile fogli html*/
-.bgimage {
-  background-image: url("../img/barbershop_blurred_small.jpg");
-  background-position: center;
-  min-height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  display: block;
-  max-width: 100%;
-  text-align: center;
-}
+/*-------------Fogli di stile------------*/
+
+/*Generico*/
 
 body { padding-top: 100px; }
 
@@ -191,8 +263,6 @@ h1:after {
   padding-right:30px;
   font-size: 20px;
 }
-
-
 
 .icon{
   margin-left: 13px;
@@ -244,68 +314,15 @@ h1:after {
   margin-bottom: 5%;
 }
 
-#homepage_left_col{
-  width:50%;
-  text-align: justify;
-  margin-left:5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-#homepage_right_col{
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-#homepage_orari{
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-}
-
-#hompage_contatti{
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 
-
-
-#homepage_titolo{
-  color: white;
-  font-size:6vw;
-  font-family: 'Times New Roman', Times, serif;
-  width: 100%;
-}
-
-#homepage_bottone{
-  width: 200px;
-  height: 50px;
-  margin-bottom: auto;
-  margin-top: 5%;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: rgba(255, 255, 255);
-  opacity: 80%;
-  border:none;
-  color:var(--main_color);
-  font-size: 14px;
-  text-align: center;
-  border-radius: 25px;
-}
-
-
-
+/*Chi siamo*/
 
 .chisiamo_mappa{
   width:50%;
   height: 600px;
   text-align: center;
 }
-
-
 
 .chisiamo_icone{
   text-align: center;
@@ -413,9 +430,6 @@ h1:after {
 }
 
 .formProf{
-  
- 
-  
   margin-right: 5%;
   margin-left: 5%;
   margin-top:0%;
@@ -561,4 +575,9 @@ h1:after {
   color: white; 
   font-size: 1vw;
   text-align:center
+}
+
+
+.hidden{
+  display:none;
 }

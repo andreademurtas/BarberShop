@@ -1,11 +1,25 @@
 $(document).ready(function(){
-    $("#navbar_barber").hide();
+    
 
-    //Animazioni comparsa delle sezioni della pagina
-    $(".pos1").fadeIn().delay( 300 );  
-    $(".pos2").fadeIn().delay( 300 );
-    $(".pos3").fadeIn().delay( 300 );
-    $(".pos4").fadeIn().delay( 300 );
+    //Homepage
+    $("#navbar_barber").hide();
+    $("#homepage_titolo").hide();
+    $("#homepage_bottone").hide();
+
+    $("#navbar_barber").slideDown("slow");
+    $("#homepage_titolo").fadeIn(2000);
+    $("#homepage_bottone").fadeIn(4000);
+    
+    
+    /*$(window).scroll(function() {
+        if ($(document).scrollTop() > 200) {
+          $("#homepage_elem1").fadeIn(1000).delay(500);
+          $("#homepage_elem2").fadeIn(1000).delay(500);
+          $("#homepage_elem3").fadeIn(1000);
+          
+        }
+    });*/
+
     
  
 
