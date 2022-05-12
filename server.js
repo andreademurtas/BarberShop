@@ -257,17 +257,16 @@ app.post("/modificaUtente", ensureAuth, (req,res) => {
     var email = req.session.user;
     var nome = req.body.nome;
     var cognome = req.body.cognome;
-    var genere = req.body.genere;
     var telefono = req.body.telefono;
 	var password = req.body.password;
 	if (password === "") {
-    	db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5 WHERE email = $6", [nome, cognome, email, genere, telefono, req.session.user])
+    	db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, telefono = $4 WHERE email = $5", [nome, cognome, email, telefono, req.session.user])
 			.then(result => {
 				res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
 			}).catch(e => { console.error(e.stack) });
 	}
     else {
-    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5, passhash = $6 WHERE email = $7", [nome, cognome, email, genere, telefono, bcrypt.hashSync(password,10), req.session.user])
+    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, telefono = $4, passhash = $5 WHERE email = $6", [nome, cognome, email, telefono, bcrypt.hashSync(password,10), req.session.user])
 		.then(result => {
 			res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
 		}).catch(e => { console.error(e.stack) });
