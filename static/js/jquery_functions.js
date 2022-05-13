@@ -31,6 +31,16 @@ $(document).ready(function(){
     $("#prenota_taglio2").slideDown(2000);
     $("#prenota_taglio3").slideDown(3000);
 
+    //Login
+    $("#login_step1").hide();
+    $("#login_step2").hide();
+    $("#login_step3").hide();
+
+    $("#login_step1").fadeIn(2000);
+    $("#login_step2").fadeIn(3000);
+    $("#login_step3").fadeIn(4000);
+
+
  
 
 
@@ -51,6 +61,8 @@ $(document).ready(function(){
     });
     $(".bottone_login").mouseenter(function(){
         $(this).css("opacity","100%");
+        $(this).css("color","white");
+        
     });
     $(".bottone_login").mouseleave(function(){
         $(this).css("opacity","80%");
