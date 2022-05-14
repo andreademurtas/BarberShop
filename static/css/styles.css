@@ -379,67 +379,150 @@
 
 
 
-/*-----------------------------------------------*/
+/*--------------------Registrati-----------------*/
 
-
+@media screen and (min-width:801px) {
+  .box_registrazione{
+    width: 40%;
+  }
+  .table_registrazione{
+    width:170px;
+  }
+  #nota_registrazione{
+    width:50%;
+  }
+}
 
 @media screen and (max-width:800px) {
   .box_registrazione{
     width: 70%;
   }
+  .table_registrazione{
+    width:170px;
+  }
   #nota_registrazione{
-    width: 60%;
+    width:60%;
   }
 }
-
 
 @media screen and (max-width:400px) {
   .box_registrazione{
     width: 80%;
   }
-  #nota_registrazione{
-    width: 80%;
+  .table_registrazione{
+    width:60%;
   }
-  .data{
-    flex-wrap: wrap;
+  #nota_registrazione{
+    width:80%;
+  }
+  
+}
+
+.data{
+  flex-wrap: wrap;
+}
+
+.box_registrazione{
+  text-align: center;
+  margin-bottom: 30px; 
+  border: 2px solid var(--main_color); 
+  padding-bottom: 25px; 
+  border-radius: 20px; 
+  padding-top: 25px;
+  justify-content: center; 
+  margin: auto;
+}
+
+#nota_registrazione{
+  align-content: center; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#registrati_logo{
+  margin:auto;
+  width:200px;
+}
+
+.casella_registrazione{
+  width:100%;
+  margin-bottom: 8%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width:1px;
+  border-color: black;
+}
+
+/*----------------Profilo--------------------*/
+
+
+.profilo_form{
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top:0%;
+  margin-bottom: 5%;
+  border: 2px solid  var(--main_color); 
+  padding-left:2%;
+  padding-bottom: 2%; 
+  border-radius: 20px; 
+  padding-right:2%;
+}
+
+.profilo_form2{
+  
+ 
+  margin-left:5%; 
+  margin-right: 5%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  border: 2px solid var(--main_color); 
+  padding-left:10%;
+  padding-bottom: 2%; 
+  border-radius: 20px; 
+  padding-right:10%;
+  
+}
+
+/*----------Barra a fondo pagina--------*/
+.barraFinePagina{
+  background-color: #473a30;
+  border-top-left-radius: 25px; 
+  border-top-right-radius: 25px;
+  bottom:0;
+  width: 100%;
+  height: fit-content;
+  margin-top: auto;
+}
+
+@media screen and (min-width:800px){
+  .testoFinePagina{
+    font-size: 13px;
   }
 }
+
+@media screen and (max-width:800px){
+  .testoFinePagina{
+    font-size: 10px;
+  }
+}
+
+.testoFinePagina{
+  margin: 6%;
+  color: white; 
+  text-align:center
+}
+
+/*-------------Fogli di stile------------*/
+
+/*Generico*/
+
 
 @media screen and (max-width: 1050px) {
   .navbar-nav>li{font-size: 16px;}
 }
 
 
-
-/*@media screen and (max-width: 980px) {
-
-  .profilo_form2{
-    width: 180%;
-  }
-  .profilo_form{
-    width: 150%;
-  }
-  
-}
-@media screen and (max-width: 820px){ 
-  .profilo_form{
-    width: 100%;
-  }}
-  
-  @media screen and (max-width:550px){ 
-    .profilo_form{
-      width: 85%;
-    }}*/
-
-
-
-
-
-
-
-/*-------------Fogli di stile------------*/
-
-/*Generico*/
 
 body { padding-top: 100px; }
 
@@ -505,6 +588,7 @@ h1:after {
   padding-bottom: 5px;
   border-radius: 100px;
   margin-bottom: 5%;
+  display: none;
 }
 
 
@@ -536,37 +620,9 @@ h1:after {
   padding-bottom: 2%; 
   border: 0px;
   color: white;
+  opacity:80%;
 }
 
-
-.box_registrazione{
-  text-align: center;
-  margin-bottom: 30px; 
-  border: 2px solid var(--main_color); 
-  padding-bottom: 25px; 
-  border-radius: 20px; 
-  padding-top: 25px;
-  width: 40%;
-  justify-content: center; 
-  margin: auto;
-}
-
-.casella_registrazione{
-  margin-bottom: 8%;
-  border-radius: 10px;
-  border-style: solid;
-  border-width:1px;
-  border-color: black;
-}
-
-#nota_registrazione{
-  justify-content: center; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  width:30%
-  
-}
 
 
 .mp{
@@ -577,58 +633,6 @@ h1:after {
   height: 80%;
   width: 80%;
 
-}
-
-.profilo_form{
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top:0%;
-  margin-bottom: 5%;
-  border: 2px solid  var(--main_color); 
-  padding-left:2%;
-  padding-bottom: 2%; 
-  border-radius: 20px; 
-  padding-right:2%;
-}
-
-.profilo_form2{
-  
- 
-  margin-left:5%; 
-  margin-right: 5%;
-  margin-top: 0%;
-  margin-bottom: 5%;
-  border: 2px solid var(--main_color); 
-  padding-left:10%;
-  padding-bottom: 2%; 
-  border-radius: 20px; 
-  padding-right:10%;
-  
-}
-
-
-
-
-
-
-
-
-
-
-.barraFinePagina{
-  background-color: #473a30;
-  border-top-left-radius: 25px; 
-  border-top-right-radius: 25px;
-  bottom:0;
-  width: 100%;
-  margin-top: auto;
-}
-
-.testoFinePagina{
-  margin: 6%;
-  color: white; 
-  font-size: 1vw;
-  text-align:center
 }
 
 
