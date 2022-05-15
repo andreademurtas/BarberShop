@@ -6,9 +6,10 @@
 
 
     <!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" src="../js/functions.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery_functions.js"></script>
         
         
 </head>
@@ -36,48 +37,48 @@
         </ul>
     </div>
     </nav>
-    <div class="content text-center">
-        <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
+    <div class="content text-center pos1">
+        <h1 class="h1 grafica_titolo">Barber Shop</h1>
     </div>
     <br>
     <br>
-    <div class="d-flex flex-row justify-content-center" style="text-align: center;">
-        <div class="d-flex flex-column">
-            <div class="d-flex flex-row justify-content-center" style="text-align: center;margin-bottom: 30px; border: 2px solid #5a3a1a; padding-left: 25px;padding-bottom: 25px; border-radius: 20px; padding-right:20px ; padding-top: 25px;">
-                <table>
-                    <form action="/registrati" method="post" name="registrazione" >
+    <div class="d-flex flex-row pos2" style="text-align: center">
+        <div class="d-flex flex-column" style="width: 100%;">
+            <div class="d-flex box_registrazione">
+                <table class="table_registrazione">
+                    <form action="/registrati" method="post" name="registrazione" onsubmit="checkPass()" >
                         <tr><td>
                             <h5>Registrati</h5>
                         <tr><td>
-                            <p style="margin-top: 20px">Inserisci tuoi dati personali </p>
+                            <p style="margin-top: 20px">Inserisci tuoi dati:</p>
                         </td></tr>
                         <tr><td>
-                            <input type="text" name="nome" size="20" style="margin-bottom: 5px;" placeholder="Nome" required>
+                            <input class="casella_registrazione" type="text" name="nome" size="20" placeholder="Nome" required>
                         </td></tr>
                         <tr><td>
-                            <input type="text" name="cognome" size="20" style="margin-bottom: 5px;" placeholder="Cognome" required>
+                            <input class="casella_registrazione" type="text" name="cognome" size="20" placeholder="Cognome" required>
                         </td></tr>
                         <tr style="text-align: left;"><td>
-                            <select name="genere" style="margin-bottom: 5px;" required>
-                                <option value="M">M</option>
-                                <option value="F">F</option>
+                            <select class="casella_registrazione"name="genere" required>
+                                <option value="M">Maschio</option>
+                                <option value="F">Femmina</option>
                             </select>
                         </td></tr>
                         <tr><td>
-                            <input type="email" name="email" size="20" style="margin-bottom: 5px;" placeholder="Email" required>
+                            <input class="casella_registrazione" type="email" name="email" size="20" placeholder="Email" required>
                         </td></tr>
                         <tr><td>
-                            <input type="tel" name="telefono" size="20" style="margin-bottom: 5px;" placeholder="Telefono" required>
+                            <input class="casella_registrazione" type="tel" name="telefono" size="20"  placeholder="Telefono" required>
                         </td></tr>
                         <tr><td>
-                            <input type="password" name="password" size="20" style="margin-bottom: 5px;" placeholder="Password" required>
+                            <input class="casella_registrazione" type="password" name="password" size="20"  placeholder="Password" required>
                         </td></tr>
                         <tr><td>
-                            <input type="password" name="password2" size="20" style="margin-bottom: 5px;" placeholder="Ripeti Password" required>
+                            <input class="casella_registrazione" type="password" name="password2" size="20" placeholder="Ripeti Password" required>
                         </td></tr>
                         <tr><td></td></tr>
                         <tr><td>
-                                <input type="submit" value="Registrati" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="border-radius: 20px; text-align: center ; background-color: #987654; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; color: white;">
+                                <input class="bottone_generico" type="submit" value="Registrati" onmouseover="changeColor(this)" onmouseleave="colorBack(this)" style="padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px;">
                         </td></tr>
                         <tr><td>
                             <a class="nav-link" href="login"><small>Hai già un account?</small></a>
@@ -85,21 +86,22 @@
                 </table>
             </div>
             
-            <div class="d-flex flex-row justify-content-center" style="text-align: center; max-width:fit-content;">
-                <p style="line-height: 0.9; margin-bottom: 50px;"><small>
+            <div class="d-flex flex-column justify-content-center" style="text-align:center; margin-bottom:5%" id="nota_registrazione">
+                <p style="line-height: 0.9;margin:5%"><small>
                     I tuoi dati verranno trattati nella rispetto della normativa della privacy. Salviamo i tuoi dati per rendere il servizio più semplice all'utente
                 </small></p>
+                <img src="../img/registrati_logo.png" id="registrati_logo">
+
             </div>
         </div>
     </div>
 
-    <div class="d-flex  flex-wrap justify-content-center" style="bottom:0; width: 100%;background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px">
+    <div class="d-flex  flex-wrap justify-content-center barraFinePagina">
+        
         <div>
-                <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
-                <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
+                <p class="testoFinePagina" ><b>Barber Shop</b><br>Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
         </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

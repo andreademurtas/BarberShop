@@ -28,6 +28,12 @@ function ValidaForm(){
     return true;
 }
 
+function checkPass(e){
+    if(document.registrazione.password.value != document.registrazione.password2.value){
+        alert("le password non coincidono");
+    }
+}
+
 function changeColor(e){
     e.style="border:0px; border-radius: 100px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white; box-shadow: 2px 2px 2px black";
     
@@ -104,6 +110,7 @@ function checkInfo(e){
     if(e.genere.value=="")e.genere.value=name.genere;
     if(e.telefono.value=="")e.telefono.value=name.telefono;
     if(e.email.value=="")e.email.value=name.email;
+    if(e.password.value!=e.password2.value)alert("Le password non coincidino");
 }
 
 function logout(){

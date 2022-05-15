@@ -18,7 +18,7 @@ db.connect( (err) => {
     if (err) {
 	  console.error("Errore connessione al database");
 	  console.error(err);
-	  process.exit(1);
+	  //process.exit(1);
 	}
 });
 
@@ -67,7 +67,7 @@ function restrict(req, res, next) {
         next();
     } else {
         req.session.error = "Access denied!";
-        res.sendFile(path.join(__dirname, "static/templates/nonautenticato.html"));
+        res.sendFile(path.join(__dirname, "static/templates/login.html"));
     }
 }
 
@@ -85,6 +85,10 @@ app.get("/prenota", (req,res) => {
 
 app.get("/profilo", restrict, (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
+});
+
+app.get("/temp", (req,res) => {
+    res.sendFile(path.join(__dirname, "static/templates/Def_Template.html"));
 });
 
 app.get("/login", (req,res) => {
@@ -253,17 +257,17 @@ app.post("/modificaUtente", ensureAuth, (req,res) => {
     var email = req.session.user;
     var nome = req.body.nome;
     var cognome = req.body.cognome;
-    var genere = req.body.genere;
     var telefono = req.body.telefono;
-    var password = req.body.password;
-    if (password === "") { 	        
-    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5 WHERE email = $6", [nome, cognome, email, genere, telefono, req.session.user])
-		.then(result => {
-			res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
-		}).catch(e => { console.error(e.stack) });
+	var password = req.body.password;
+	var genere = req.body.genere;
+	if (password === "") {
+    	db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5 WHERE email = $6", [nome, cognome, email, genere, telefono, req.session.user])
+			.then(result => {
+				res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
+			}).catch(e => { console.error(e.stack) });
 	}
     else {
-    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5, passhash = $6 WHERE email = $7", [nome, cognome, email, genere, telefono, bcrypt.hashSync(password,10), req.session.user])
+    db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4,  telefono = $5, passhash = $6 WHERE email = $7", [nome, cognome, email, genere, telefono, bcrypt.hashSync(password,10), req.session.user])
 		.then(result => {
 			res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));
 		}).catch(e => { console.error(e.stack) });

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>BarberShop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery_functions.js"></script>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+			<a class="navbar-brand px-3" href="/"><img src="../img/barbershop_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button> 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"> 
+                <li class="nav-item">
+                        <a class="nav-link" href="/">Homepage </a>
+                </li>
+                <li class="nav-item-active">
+                        <a class="nav-link" href="chisiamo"><strong>Chi siamo </strong><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="prenota">Prenota Appuntamento</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="profilo">Il mio profilo</a>
+                </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="content text-center ">
+        <h1 class="h1 grafica_titolo">Barber Shop</h1>
+    </div>
+    <div class="d-flex flex-row justify-content-center" style="max-width: 100%;">
+        
+                <div class="flex-col" style="max-width: 100%;">
+                <div id="chisiamo_p1">
+                    <h2 class="paragrafo_titolo">Chi Siamo</h2>
+                        <p class="paragrafo_contenuto">Nel lontano 2007 abbiamo deciso di aprire il nostro primo BarberShop, con lo scopo di introdurre un nuovo concept nel settore dei parrucchieri. I membri del nostro team sono stati selezionati per la loro determinazione e motivazione ed hanno conseguito un apposito brevetto al termine di uno specifico corso di formazione.</p>
+                </div>
+                <div id="chisiamo_p2"> 
+                        <h2 class="paragrafo_titolo">Le nostre sedi</h2>
+                        <p class="paragrafo_contenuto">Al momento abbiamo 2 sedi principali. Entrambe sono posizionate in posizioni strategiche, facilmente raggiungibili con i mezzi di trasporto pubblici. Pianifichiamo di aprire a breve una nuova sede in zona Prati.</p>
+                        <div class="d-flex flex-row flex-wrap justify-content-center" style="max-width: 100%; text-align: center; margin-bottom:5%;">
+                                <div class="d-flex flex-column chisiamo_mappa">
+                                        <iframe class="mp" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.834628246186!2d12.51876401564877!3d41.89641347224649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6185205c9bfd%3A0x773e8360f9a9e5e!2sEdificio%20Marco%20Polo!5e0!3m2!1sit!2sit!4v1650470089164!5m2!1sit!2sit"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <p class="p1">Prima sede a San Lorenzo<br> edificio Marco Polo (Sapienza)</p>
+                                </div> 
+                                <div class="d-flex flex-column chisiamo_mappa">   
+                                        <iframe class="mp" src="https://maps.google.com/maps?q=la%20sapienza%20&t=&z=13&ie=UTF8&iwloc=&output=embed"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <p class="p1"> Seconda sede in Città universitaria <br> La Sapienza</p>
+                                </div>
+                        </div>
+                </div> 
+                <div id="chisiamo_p3"> 
+                        
+                    <h2 class="paragrafo_titolo">Il nostro team</h2>
+                    <div class="d-flex flex-row flex-wrap justify-content-around" style="margin-right: 10%; margin-left: 10%;" >  
+                        <div class="col chisiamo_icone">
+                                <img src="../img/img_team1.jpeg" onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="team_icon">
+                                <p style="text-align: center; color: black;">Francesco - Barbiere</p>
+                        </div>
+                        <div class="col chisiamo_icone">
+                                <img src="../img/img_team2.jpeg" onmouseover="bigIcon(this)" onmouseleave="normIcon(this)"  class="team_icon">
+                                <p style="text-align: center; color: black;">Marco - Barbiere</p>
+                        </div>
+                        <div class="col chisiamo_icone">
+                                <img src=/img/img_team4.jpeg onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="team_icon">
+                                <p style="text-align: center; color: black;">Teresa - Parrucchiera</p>
+                        </div>
+                        <div class="col chisiamo_icone">
+                                <img src=/img/img_team3.jpeg  onmouseover="bigIcon(this)" onmouseleave="normIcon(this)" class="team_icon">
+                                <p style="text-align: center; color: black;">Fabrizio - Segretario</p>
+                        </div>
+                    </div>
+                </div>
+                    <p id="space" style="height: 50px;"></p>
+                </div>
+
+
+        
+        
+</div>
+
+        <div class="d-flex  flex-wrap justify-content-center barraFinePagina">
+                
+                <div>
+                        <p class="testoFinePagina" ><b>Barber Shop</b><br>Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@
     <!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" src="../js/functions.js"></script> 
+        <script type="text/javascript" src="js/functions.js"></script> 
 </head>
 <body onload="myF()">
 
@@ -37,33 +37,34 @@
     </div>
     </nav>
     <div class="content text-center">
-        <h1 class="h1" style="background-color: #987654; color: white; font-size:6vw; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px; border-radius: 100px;">Barber Shop</h1>
+        <h1 class="h1 grafica_titolo">Barber Shop</h1>
     </div>
-    <div class="d-flex flex-column flex-wrap justify-content-center">
+    
         <div class="d-flex flex-row flex-wrap justify-content-start" style="width: 100%;margin-top: 3%;">
              
-            <input type="button" value="Logout" onclick="logout()" onmouseover="changeColor2(this)" onmouseleave="colorBack2(this)" style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white;">
-            <h2 style=" text-align: start;width: 50%; color: #987654 ; font-size:250% ; font-family: 'Times New Roman', Times, serif; margin-top: 5%; padding-left: 3%; padding-right: 0%;"><span id="myText"></span></h2> 
+            <input type="button" value="Logout" onclick="logout()" onmouseover="changeColor2(this)" onmouseleave="colorBack2(this)" style="margin-bottom: 5%; margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white;">
+            <h2 style="margin-bottom: 5%; text-align: start;width: 50%; color: #987654 ; font-size:250% ; font-family: 'Times New Roman', Times, serif; margin-top: 5%; padding-left: 3%; padding-right: 0%;"><span id="myText"></span></h2> 
         </div>
-        <div class="d-flex flex-row flex-wrap " style="width: 100%;"> 
-            <div class="d-flex flex-column  justify-content-start" style=" width: 50%;">   
-                <form class="formProf2"  method="post"  action="/prenotaConLogin" name="prenotazione" onsubmit="checkInfo(this)" style="height: 70%;">
+    <div class="d-flex flex-wrap flex-column justify-content-center">
+        <div class="d-flex flex-row flex-wrap justify-content-center" style="width: 100%;"> 
+            <div class="d-flex flex-column  justify-content-start" style="">   
+                <form class="profilo_form2"  method="post"  action="/prenotaConLogin" name="prenotazione" onsubmit="checkInfo(this)" style="height: 70%;">
                     
-                        <div class="row justify-content-center" >
+                        
                             
-                            <h2 class="h2" style=" color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Prenota un appuntamento</h2>
-                                <select name="tipo"  style="margin-bottom: 1.5%;width: 80%;" required>
+                            <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Prenota un appuntamento</h2>
+                                <select name="tipo"  style="margin-bottom: 1.5%;width: 100%;" required>
                                     <option value="">Tipo di taglio</option>
                                     <option value="Taglio capelli">Taglio capelli</option>
                                     <option value="Taglio barba">Taglio barba</option>
                                 </select>
-                                <select name="sede" style="margin-bottom: 1.5%; ;width: 80%;" required>
+                                <select name="sede" style="margin-bottom: 1.5%; ;width: 100%;" required>
                                     <option value="">Sede</option>
                                     <option value="Ex Poste">Ex Poste</option>
                                     <option value="Città Universitaria">Città universitaria</option>
                                 </select>
-                                <input name="giorno" type="date" size="15%" style="margin-top:0.5%;;width: 80%;margin-bottom: 1.5%;" required>
-                                <select name="ora" style="width: 80%;" required>
+                                <input name="giorno" type="date" size="15%" style="margin-top:0.5%;;width: 100%;margin-bottom: 1.5%;height: 10%;" required>
+                                <select name="ora" style="width: 100%;" required>
                                     <option value='07:00'>07:00</option>
                                     <option value='07:30'>07:30</option>
                                     <option value='08:00'>08:00</option>
@@ -96,12 +97,12 @@
                                         <input hidden type="text" name="nome" style="width: 60%; margin-bottom: 1.5%;" placeholder="Nome">
                                         <input hidden type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 60%;">
                                         <select hidden name="genere" style="margin-bottom: 1.5%;width: 60%;">
-                                            <option value="e">Genere</option>
+                                            <option value="">Genere</option>
                                             <option value="M">M</option>
                                             <option value="F">F</option>
                                         </select>
                                         <input hidden type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 60%;">
-                        </div>
+                        
                         <br>
                         <br>
                         <div style="margin-top: 2%; text-align: center;">
@@ -109,48 +110,52 @@
                         </div>
                     
                 </form>
-                <div class="d-flex flex-column justify-content-center formProf2" style="height: 30%;margin-top: 0%;">
+                <div class="d-flex flex-column justify-content-center profilo_form2" style="height: 60%;margin-top: 0%;padding-bottom: 10%;padding-top: 10%;">
                     <p style= "text-align:center;color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 3%;">Prenotazioni</p>
                     <!--div class="d-flex flex-column justify-content-center"-->
-                        <p style="text-align:start;"><span id="myPren"></span></p>
+                        <p style="text-align:start;"><span id="myPren" style="margin-bottom: 2%;"></span></p>
                     <!--/div-->
                 </div>
             </div>
-            <div class="d-flex flex-column flex-wrap justify-content-start" style="width: 50%; min-width:500px;height: 100%;">
-                <form class="formProf" method="post" action="/modificaUtente" name="registrazione" onsubmit="checkInfo(this)" >
-                
+            <div class="d-flex flex-column flex-wrap justify-content-center profilo_form" style="" >
+                <form class="justify-content-center" method="post" action="/modificaUtente" name="registrazione" onsubmit="checkInfo(this)" style="width: 100%;" >
+                    
                     <h2 class="h2" style="text-align: center; color: #987654 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 10%;">Modifica informazioni personali</h2>
                     <p style="text-align: center;">(inserire i campi che si desiderano cambiare)</p>
-                    <div class="d-flex flex-row justify-content-center">
-                        <div class="d-flex flex-column justify-content-center" >     
-                            <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="text" name="nome" style="width: 80%; margin-bottom: 1.5%;" placeholder="Nome" >
-                                <p class="p2" id="nome" ></p>
+                    <div class="d-flex flex-row flex-wrap justify-content-center" style="width: 100%;">
+                        <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 100%;" >     
+                            <div class="d-flex flex-row data" style="">
+                                <input class="" type="text" name="nome" style="width: 40%;margin-right: 10%; margin-bottom: 1.5%;" placeholder="Nome" >
+                                <p class="" id="nome" style="width: 40%"></p>
                             </div>
-                            <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="text" name="cognome" placeholder="Cognome" style="margin-bottom: 1.5%;width: 80%;" >
-                                <p class="p2" id="cognome"></p>
+                            <div class="d-flex flex-row data ">
+                                <input class="" type="text" name="cognome" placeholder="Cognome" style="width: 40%;margin-right: 10%;margin-bottom: 1.5%;" >
+                                <p class="" id="cognome" style="width: 40%"></p>
                             </div>
-                            <div class="d-flex flex-row justify-content-center">
-                                <select class="p2" name="genere" style="margin-bottom: 1.5%;width: 80%;"  >
-                                    <option value="e">Genere</option>
+                            <div class="d-flex flex-row data ">
+                                <select class="" name="genere" style="width: 40%;margin-right: 10%;margin-bottom: 1.5%;"  >
+                                    <option value="">Genere</option>
                                     <option value="M">M</option>
                                     <option value="F">F</option>
                                 </select>
-                                <p class="p2" id="genere"></p>
+                                <p class="" id="genere" style="width: 40%"></p>
                             </div>
-                            <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style="margin-bottom:1.5%; width: 80%;" >
-                                <p class="p2" id="telefono"></p>
+                            <div class="d-flex flex-row data ">
+                                <input class="data" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style=" width: 40%;margin-right: 10%;margin-bottom:1.5%; " >
+                                <p class="data" id="telefono" style="width: 50%"></p>
                             </div>
-                            <div class="d-flex flex-row justify-content-center">
-                                <input class="p2" type="email" name="email" placeholder="Email" style="width: 80%;margin-bottom:10%">  
-                                <p class="p2" id="email"></p>
+                            <div class="d-flex flex-row data ">
+                                <input class="" type="email" name="email" placeholder="Email" style="width: 40%;margin-right: 10%; margin-bottom:1.5%">  
+                                <p class="" id="email" style="width: 50%;"></p>
                             </div> 
-                            <div class="d-flex flex-row justify-content-center">
-									<input class="p2" type="password" name="password" placeholder="Password" style="width: 80%; margin-bottom:1.5%">
-								    <p class="p2" id="password">Valore password nascosto</p>
-                            </div>
+							<div class="d-flex flex-row data">
+									<input class="" type="password" name="password" placeholder="Password" style="width: 40%;margin-right: 10%; margin-bottom:1.5%">
+								    <p class="" id="password" style="width: 50%;">Valore password nascosto</p>
+							</div>
+                            <div class="d-flex flex-row data">
+                                <input class="" type="password" name="password2" placeholder="Password" style="width: 40%;margin-right: 10%; margin-bottom:10%">
+                                <p class="" id="password" style="width: 50%;">Valore password nascosto</p>
+                        </div>
                         </div>
                     </div>
                     <div style="margin-top: 2%; text-align: center;">
@@ -160,12 +165,12 @@
             </div>
         </div>
     </div>
-    <div class="d-flex  flex-column flex-wrap justify-content-center" style=" bottom:0 ;width: 100%; width: 100%; background-color: #987654; border-top-left-radius: 25px; border-top-right-radius: 25px; color: white;">
+    <div class="d-flex  flex-wrap justify-content-center barraFinePagina">
+        
         <div>
-                <p style="padding-top: 10px; color: white; font-size: 15px; text-align:center">Barber Shop</p> 
-                <p style="padding-top: 2px; color: white; font-size: 13px; text-align:center">Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
+                <p class="testoFinePagina" ><b>Barber Shop</b><br>Via dello Scalo S. Lorenzo, 82, 00159 Roma RM <br> 06 64912836 <br> barbershop@gmail.com</p>
         </div>
-    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
