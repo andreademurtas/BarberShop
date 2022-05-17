@@ -209,7 +209,7 @@ app.post("/prenotaConLogin", async (req,res) => {
 		return;
     }
     if (esiste) {
-	res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/prenota'>Torna alla pagina precedente</a>");
+	res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/profilo'>Torna alla pagina precedente</a>");
 	}
     else {
 		try{
@@ -232,7 +232,7 @@ function ensureAuth(req, res, next) {
   if (req.session.user) {
     next();
   } else {
-    return res.json(401, {error: 'user must be logged in.'});
+    return res.status(401).json({error: 'user must be logged in.'});
   }
 }
 
