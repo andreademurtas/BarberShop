@@ -1,0 +1,18 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" >
+        function myF2(){
+    var pren=new XMLHttpRequest();
+    pren.open("GET","/getPrenotazioni",false);
+    pren.send();;
+    pren = JSON.parse(pren.response);
+    for(i=0;i<pren.length;i++){
+        document.getElementById("myPren").innerHTML=document.getElementById("myPren").innerHTML+" "+pren[i].giorno.slice(0,10)+"   "+pren[i].tipo+"   "+pren[i].ora.slice(0,5)+"   "+pren[i].sede+"<br>";
+    }
+
+}
+    </script> 
+</head>
+<body onload="myF2()">
+    <p style="text-align:start;"><span id="myPren" style="margin-bottom: 2%;"></span></p>
+</body>
