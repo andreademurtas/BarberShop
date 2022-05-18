@@ -11,21 +11,21 @@ const utente = require("./utente");
 const res = require("express/lib/response");
 const { Router } = require("express");
 
-const app = express();
+const app = express(); //inizializzo la web app
 
-const db = database.db;
+const db = database.db; //inizializzo database
 db.connect( (err) => {
     if (err) {
 	  console.error("Errore connessione al database");
 	  console.error(err);
-	  //process.exit(1);
+	  process.exit(1);
 	}
 });
 
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.static(path.join(__dirname, "static"))); //specificare dove sono file statici
 app.use(body_parser.urlencoded({ extended: true }));
 app.use(body_parser.json());
-app.use(session({
+app.use(session({ //setto configurazione della sessione
     resave: false,
     saveUninitialized: true,
     secret: crypto.randomBytes(32).toString("hex"),
@@ -85,10 +85,6 @@ app.get("/prenota", (req,res) => {
 
 app.get("/profilo", restrict, (req,res) => {
     res.sendFile(path.join(__dirname, "static/templates/profilo.html"));
-});
-
-app.get("/temp", (req,res) => {
-    res.sendFile(path.join(__dirname, "static/templates/Def_Template.html"));
 });
 
 app.get("/login", (req,res) => {
