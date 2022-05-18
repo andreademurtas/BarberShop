@@ -483,6 +483,30 @@
   padding-right:10%;
   
 }
+#myText{
+  font-size: 100%;
+  margin-right: 0%;
+}
+
+#prof_cell{
+  max-width: 40%;
+  width: 40%;
+}
+
+@media screen and (max-width:400px) {
+  #prof_cell{
+    max-width: 100%;
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width:550px) {
+  #myText{
+    font-size: 70%;
+    margin-right: 0px;
+  }
+}
 
 /*----------Barra a fondo pagina--------*/
 .barraFinePagina{

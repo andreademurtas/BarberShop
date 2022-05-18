@@ -44,9 +44,9 @@
     
         <div class="d-flex flex-row flex-wrap justify-content-center " style="width: 100%;margin-top: 3%;margin-bottom: 5%;">
              
-            <input class="bottone_generico " type="button" value="Logout" onclick="logout()"  style=" max-height:40px ; margin-top: auto; margin-bottom: auto; line-height: 10px;">
-            <h2 style=" margin-bottom:auto; text-align: start; color:#473a30 ; font-family: 'Times New Roman', Times, serif; margin-top: auto; padding-left: 3%; padding-right: 0%;"><span id="myText" style="font-size:70%;"></span></h2> 
-            <p style="width: 20%;"></p>
+            <input class="bottone_generico " type="button" value="Logout" onclick="logout()"  style=" max-height:40px ; margin-top: auto; margin-bottom: auto; line-height: 10px; margin-left: 2%;margin-right: 2%;">
+            <h2 style=" margin-bottom:auto; text-align:center; color:#473a30 ; font-family: 'Times New Roman', Times, serif; margin-top: auto;"><span id="myText" style=""></span></h2> 
+            
         </div>
     <div class="d-flex flex-wrap flex-column justify-content-center">
         <div class="d-flex flex-row flex-wrap justify-content-center" style="width: 100%;"> 
@@ -114,9 +114,11 @@
                     
                 </form>
                 <div class="d-flex flex-column justify-content-center profilo_form2" style="height: 60%;margin-top: 0%;padding-bottom: 10%;padding-top: 10%;">
-                    <p style= "text-align:center;color: #473a30 ; font-size:150% ; font-family: 'Times New Roman', Times, serif; margin-top: 10%;margin-bottom: 3%;">Prenotazioni</p>
+                    <p style= "text-align:center;color: #473a30 ; font-size:150% ; font-family: 'Times New Roman', Times, serif;margin-bottom: 3%;">Prenotazioni</p>
                     <!--div class="d-flex flex-column justify-content-center"-->
-                        <p style="text-align:start;"><span id="myPren" style="margin-bottom: 2%;"></span></p>
+                    <iframe src="/templates/prenotazioni.html">
+                        
+                    </iframe>
                     <!--/div-->
                 </div>
             </div>
@@ -128,15 +130,15 @@
                     <div class="d-flex flex-row flex-wrap justify-content-center" style="width: 100%;">
                         <div class="d-flex flex-column flex-wrap justify-content-center" style="width: 100%;" >     
                             <div class="d-flex flex-row data" style="">
-                                <input class="" type="text" name="nome" style="width: 40%;margin-right: 10%; margin-bottom: 1.5%;" placeholder="Nome" >
+                                <input id="prof_cell" class="" type="text" name="nome" style="margin-right: 10%; margin-bottom: 1.5%;" placeholder="Nome" >
                                 <p class="" id="nome" style="width: 40%"></p>
                             </div>
                             <div class="d-flex flex-row data ">
-                                <input class="" type="text" name="cognome" placeholder="Cognome" style="width: 40%;margin-right: 10%;margin-bottom: 1.5%;" >
+                                <input id="prof_cell" class="" type="text" name="cognome" placeholder="Cognome" style="margin-right: 10%;margin-bottom: 1.5%;" >
                                 <p class="" id="cognome" style="width: 40%"></p>
                             </div>
                             <div class="d-flex flex-row data ">
-                                <select class="" name="genere" style="width: 40%;margin-right: 10%;margin-bottom: 1.5%;"  >
+                                <select id="prof_cell" class="" name="genere" style="margin-right: 10%;margin-bottom: 1.5%;"  >
                                     <option value="">Genere</option>
                                     <option value="M">M</option>
                                     <option value="F">F</option>
@@ -144,19 +146,19 @@
                                 <p class="" id="genere" style="width: 40%"></p>
                             </div>
                             <div class="d-flex flex-row data ">
-                                <input class="data" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style=" width: 40%;margin-right: 10%;margin-bottom:1.5%; " >
+                                <input id="prof_cell" class="data" type="tel" name="telefono" placeholder="Telefono" min="3000000000" max="39999999999" style=" margin-right: 10%;margin-bottom:1.5%; " >
                                 <p class="data" id="telefono" style="width: 50%"></p>
                             </div>
                             <div class="d-flex flex-wrap flex-row data ">
-                                <input class="flex-wrap" type="email" name="email" placeholder="Email" style="max-width: 40%; margin-right: 10%; margin-bottom:1.5%">  
+                                <input id="prof_cell" class="flex-wrap" type="email" name="email" placeholder="Email" style=" margin-right: 10%; margin-bottom:1.5%">  
                                 <p class="flex-wrap" id="email" style=""></p>
                             </div> 
 							<div class="d-flex flex-row data">
-									<input class="" type="password" name="password" placeholder="Password" style="width: 40%;margin-right: 10%; margin-bottom:1.5%">
+									<input id="prof_cell" class="" type="password" name="password" placeholder="Password" style="margin-right: 10%; margin-bottom:1.5%">
 								    <p class="" id="password" style="width: 50%;">Valore password nascosto</p>
 							</div>
                             <div class="d-flex flex-row data">
-                                <input class="" type="password" name="password2" placeholder="Password" style="width: 40%;margin-right: 10%; margin-bottom:10%">
+                                <input class="" id="prof_cell" type="password" name="password2" placeholder="Password" style="margin-right: 10%; margin-bottom:10%">
                                 <p class="" id="password" style="width: 50%;">Valore password nascosto</p>
                         </div>
                         </div>
