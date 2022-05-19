@@ -470,8 +470,6 @@
 }
 
 .profilo_form2{
-  
- 
   margin-left:5%; 
   margin-right: 5%;
   margin-top: 0%;
@@ -484,9 +482,17 @@
   
 }
 
+/*------------Profilo Aggiornato--------*/
+
+
+
+
+
+
+
 /*----------Barra a fondo pagina--------*/
 .barraFinePagina{
-  background-color: #473a30;
+  background-color: var(--main_color);
   border-top-left-radius: 25px; 
   border-top-right-radius: 25px;
   bottom:0;
@@ -510,7 +516,7 @@
 .testoFinePagina{
   margin: 6%;
   color: white; 
-  text-align:center
+  text-align:center;
 }
 
 /*-------------Fogli di stile------------*/
