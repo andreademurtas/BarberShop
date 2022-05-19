@@ -170,7 +170,7 @@ app.post("/prenotaSenzaLogin", async (req,res) => {
 		return;
     }
     if (esiste) {
-        res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/prenota'>Torna alla pagina precedente</a>");
+		res.sendFile(path.join(__dirname, "static/templates/prenotazionepresente.html"));
 	}
     else {
 		try{
@@ -205,7 +205,7 @@ app.post("/prenotaConLogin", async (req,res) => {
 		return;
     }
     if (esiste) {
-	res.send("<p>Gia c'è una prenotazione in questo orario</p><br><a href='/profilo'>Torna alla pagina precedente</a>");
+		res.sendFile(path.join(__dirname, "static/templates/prenotazionepresente.html"));
 	}
     else {
 		try{
@@ -256,6 +256,7 @@ app.post("/modificaUtente", ensureAuth, (req,res) => {
     var telefono = req.body.telefono;
 	var password = req.body.password;
 	var genere = req.body.genere;
+	var password2 = req.body.password2;
 	if (password === "") {
     	db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4, telefono = $5 WHERE email = $6", [nome, cognome, email, genere, telefono, req.session.user])
 			.then(result => {
@@ -263,6 +264,10 @@ app.post("/modificaUtente", ensureAuth, (req,res) => {
 			}).catch(e => { console.error(e.stack) });
 	}
     else {
+	if (password !== password2) {
+        res.sendFile(path.join(__dirname, "static/templates/passwordnoncoincidono.html"));
+		return;
+	}
     db.query("UPDATE utenti SET nome = $1, cognome = $2, email = $3, genere = $4,  telefono = $5, passhash = $6 WHERE email = $7", [nome, cognome, email, genere, telefono, bcrypt.hashSync(password,10), req.session.user])
 		.then(result => {
 			res.sendFile(path.join(__dirname, "static/templates/profiloaggiornato.html"));

@@ -116,7 +116,6 @@ function checkInfo(e){
     if(e.genere.value=="")e.genere.value=name.genere;
     if(e.telefono.value=="")e.telefono.value=name.telefono;
     if(e.email.value=="")e.email.value=name.email;
-    if(e.password.value!=e.password2.value)alert("Le password non coincidino");
 }
 
 function logout(){
