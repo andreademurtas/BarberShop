@@ -34,36 +34,6 @@ function checkPass(e){
     }
 }
 
-function changeColor(e){
-    e.style="border:0px; border-radius: 100px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white; box-shadow: 2px 2px 2px black";
-    
-}
-
-function colorBack(e){
-    e.style="border:0px; border-radius: 100px; text-align: center ; background-color: #987654; padding-left: 6%; padding-right: 6%; padding-top: 2%; padding-bottom: 2%; color: white;";
-}
-
-function changeColor2(e){
-    e.style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white; box-shadow: 2px 2px 2px black";
-    
-}
-
-function colorBack2(e){
-    e.style="margin-left: 10%;border-radius:100px; text-align: start ; background-color: #987654; padding-left: 1%; padding-right: 1%; margin-top: 5%; color: white;";
-}
-
-function bigIcon(e){
-    e.style.height="125px";
-    e.style.width="125px" ;
-    document.getElementById("space").style.height="25px";
-}
-
-function normIcon(e){
-    e.style.height="100px";
-    e.style.width="100px";
-    document.getElementById("space").style.height="50px";
-}
-
 function controlloPW(){
     if(document.reg.password.value!=document.reg.password_rip.value){
         alert("le password non combaciano");
@@ -87,23 +57,6 @@ function myF(){
 
     
 }
-
-function myF2(){
-    alert("start");
-    var pren=new XMLHttpRequest();
-    pren.open("GET","/getPrenotazioni",false);
-    pren.send();
-    //pren = pren.response.slice(1,pren.responseText.length-1);
-    pren = JSON.parse(pren.response);
-    alert(pren);
-    //document.getElementById("myPren").innerHTML=pren[0];
-    for(i=0;i<pren.length;i++){
-        document.getElementById("myPren").innerHTML=document.getElementById("myPren").innerHTML+" "+pren[i].giorno.slice(0,10)+"   "+pren[i].tipo+"   "+pren[i].ora.slice(0,5)+"   "+pren[i].sede+"<br>";
-    }
-
-}
-
-
 
 function checkInfo(e){
     var name=new XMLHttpRequest();
